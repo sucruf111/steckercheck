@@ -1,16 +1,19 @@
 /* steckercheck.de — editorial, static, no third-party assets */
 :root {
-  --bg: #f3efe6;
-  --paper: #fffcf6;
+  --bg: #efe8d8;
+  --paper: #fffcf4;
   --ink: #141310;
   --muted: #534f46;
-  --hairline: #d8d2c4;
+  --hairline: #d4ccb8;
   --accent: #1a3d32;
+  --accent-deep: #0f261f;
   --accent-soft: #e4eee8;
-  --well: #f6f3eb;
+  --copper: #8a5a2b;
+  --well: #f6f1e4;
   --max: 38rem;
   --wide: 46rem;
   --home: 58rem;
+  --dossier: 64rem;
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   --serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino,
@@ -34,7 +37,10 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--ink);
-  background: var(--bg);
+  background:
+    radial-gradient(1200px 520px at 12% -8%, rgba(26, 61, 50, 0.07), transparent 58%),
+    radial-gradient(900px 420px at 100% 0%, rgba(138, 90, 43, 0.06), transparent 50%),
+    var(--bg);
   font-family: var(--sans);
   line-height: 1.7;
 }
@@ -52,7 +58,9 @@ a:focus-visible,
 .wordmark:focus-visible,
 .nav a:focus-visible,
 .continue:focus-visible,
-.btn-primary:focus-visible {
+.btn-primary:focus-visible,
+.path-card:focus-visible,
+.btn-ghost:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -103,6 +111,9 @@ a:focus-visible,
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--sans);
   font-size: 1.22rem;
   font-weight: 700;
@@ -110,6 +121,14 @@ a:focus-visible,
   line-height: 1.1;
   color: var(--ink);
   text-decoration: none;
+}
+
+.brand-mark {
+  display: block;
+  width: 1.7rem;
+  height: 1.7rem;
+  flex: 0 0 auto;
+  border-radius: 0.38rem;
 }
 
 .wordmark:hover {
@@ -1082,6 +1101,22 @@ address {
   .prose .table-wrap td:nth-child(4)::before {
     content: "Was sie begrenzt";
   }
+
+  .prose .table-wrap.decoder td:nth-child(1)::before {
+    content: "Feld";
+  }
+
+  .prose .table-wrap.decoder td:nth-child(2)::before {
+    content: "Wonach Sie suchen";
+  }
+
+  .prose .table-wrap.decoder td:nth-child(3)::before {
+    content: "Grenze für den vereinfachten Weg";
+  }
+
+  .prose .table-wrap.decoder td:nth-child(4)::before {
+    content: none;
+  }
 }
 
 
@@ -1152,4 +1187,461 @@ section.faq > h2 {
 .btn:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+/* —— Footer: richer legal strip —— */
+.site-footer-inner {
+  align-items: flex-start;
+}
+
+.footer-brand {
+  flex: 1 1 16rem;
+  min-width: 0;
+}
+
+.footer-brand .wordmark {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer-brand p {
+  margin: 0.15rem 0 0;
+  max-width: 36ch;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+}
+
+/* —— Homepage paths —— */
+.paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.15rem 0 0;
+}
+
+.path-card {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-top: 3px solid var(--accent);
+  padding: 1rem 1.1rem 1.05rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.path-card:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+}
+
+.path-card h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.35rem;
+  max-width: none;
+}
+
+.path-card p {
+  margin: 0;
+  max-width: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.path-card .path-go {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.home-note {
+  margin: 1.15rem 0 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+  max-width: none;
+}
+
+/* —— Dossier / referral (Bezug) —— */
+body.bezug main {
+  padding-bottom: 3.2rem;
+}
+
+.dossier-hero {
+  background:
+    linear-gradient(180deg, rgba(26, 61, 50, 0.06), transparent 70%),
+    var(--paper);
+  border-bottom: 1px solid var(--hairline);
+  padding: 2.4rem 0 2.15rem;
+}
+
+.dossier-hero-inner,
+.dossier-wrap {
+  width: min(var(--dossier), calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.dossier-hero h1 {
+  max-width: 18ch;
+  font-size: clamp(2.05rem, 5.2vw, 3.15rem);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin: 0 0 0.85rem;
+}
+
+.dossier-hero .lead {
+  font-size: 1.08rem;
+  max-width: 62ch;
+  margin-bottom: 1.1rem;
+}
+
+.dossier-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.1rem;
+  margin: 0 0 1.15rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.dossier-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ad-banner {
+  margin: 0 0 0.25rem;
+  padding: 0.85rem 1rem;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.ad-banner p {
+  margin: 0;
+  max-width: none;
+}
+
+.ad-banner strong {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--accent);
+  margin-right: 0.4em;
+}
+
+.dossier-wrap {
+  padding-top: 2.1rem;
+}
+
+.dossier-wrap h2 {
+  font-size: clamp(1.35rem, 2.6vw, 1.7rem);
+  margin: 2.6rem 0 0.75rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--hairline);
+  scroll-margin-top: 5.5rem;
+  max-width: 28ch;
+}
+
+.dossier-wrap h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.dossier-wrap > p,
+.dossier-wrap > ul,
+.dossier-wrap > ol {
+  max-width: 68ch;
+}
+
+.toc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem 1.4rem;
+  list-style: none;
+  padding: 0.9rem 0 0.2rem;
+  margin: 0 0 0.4rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.toc li {
+  max-width: none;
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.toc a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 0.12rem;
+}
+
+.toc a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.protocol {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 1.4rem;
+  counter-reset: station;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.protocol li {
+  counter-increment: station;
+  position: relative;
+  max-width: none;
+  margin: 0;
+  padding: 1.05rem 1.15rem 1.1rem 4.1rem;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+}
+
+.protocol li::before {
+  content: counter(station, decimal-leading-zero);
+  position: absolute;
+  left: 0.95rem;
+  top: 1.05rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.protocol h3 {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  margin: 0 0 0.3rem;
+  max-width: none;
+}
+
+.protocol p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.split-limits,
+.split-plug,
+.anatomy,
+.shop-types,
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.35rem;
+}
+
+.limit-card,
+.plug-card,
+.anatomy-card,
+.shop-card,
+.method-card {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  padding: 1.05rem 1.15rem 1.15rem;
+}
+
+.limit-card {
+  border-top: 3px solid var(--accent);
+}
+
+.limit-card .num {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--accent);
+  margin: 0 0 0.2rem;
+}
+
+.limit-card .sub,
+.plug-card .sub {
+  margin: 0 0 0.65rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.limit-card p,
+.plug-card p,
+.anatomy-card p,
+.shop-card p,
+.method-card p {
+  margin: 0;
+  max-width: none;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.plug-card h3,
+.anatomy-card h3,
+.shop-card h3,
+.method-card h3 {
+  font-size: 1.08rem;
+  margin: 0 0 0.4rem;
+  max-width: none;
+}
+
+.plug-card {
+  border-left: 3px solid var(--accent);
+}
+
+.stamp {
+  display: inline-block;
+  margin: 0 0 0.55rem;
+  padding: 0.18rem 0.45rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.decoder {
+  margin: 0.4rem 0 1.4rem;
+}
+
+.price-note,
+.partner-empty {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  padding: 1.05rem 1.15rem 1.15rem;
+  margin: 0.4rem 0 1.4rem;
+}
+
+.price-note p,
+.partner-empty p {
+  margin: 0 0 0.7rem;
+  max-width: 68ch;
+}
+
+.price-note p:last-child,
+.partner-empty p:last-child {
+  margin-bottom: 0;
+}
+
+.partner-empty {
+  border-top: 3px solid var(--copper);
+}
+
+.partner-slots {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.65rem;
+  margin: 0.85rem 0 0;
+}
+
+.partner-slot {
+  min-height: 6.2rem;
+  border: 1px dashed var(--hairline);
+  background: var(--well);
+  padding: 0.85rem 0.9rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.partner-slot strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.method-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.method-card {
+  border-top: 2px solid var(--accent);
+}
+
+.dont-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 1.4rem;
+}
+
+.dont-list li {
+  max-width: none;
+  margin: 0 0 0.55rem;
+  padding: 0.75rem 0.9rem 0.75rem 2.4rem;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  position: relative;
+}
+
+.dont-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0.9rem;
+  color: var(--copper);
+  font-weight: 700;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.1rem;
+  align-items: center;
+  margin: 1.6rem 0 0.4rem;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.55rem 0.15rem;
+  color: var(--accent);
+  font-weight: 650;
+}
+
+body.bezug .site-header-inner,
+body.bezug .site-footer-inner {
+  width: min(var(--dossier), calc(100% - 2rem));
+}
+
+@media (max-width: 860px) {
+  .paths,
+  .split-limits,
+  .split-plug,
+  .anatomy,
+  .shop-types,
+  .toc,
+  .method-grid,
+  .partner-slots {
+    grid-template-columns: 1fr;
+  }
+
+  .protocol li {
+    padding-left: 3.6rem;
+  }
 }

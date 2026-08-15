@@ -13,7 +13,11 @@ body {
 .skip,
 .nav,
 .continue,
-.site-footer a[href="#affiliate"] {
+.toc,
+.cta-row,
+.partner-slots,
+.site-footer a[href="#affiliate"],
+.site-footer a[href="#werbung"] {
   display: none !important;
 }
 
@@ -91,4 +95,27 @@ h1, h2, h3 {
 .faq-item,
 section.faq {
   scroll-margin-top: 0;
+}
+
+.ad-banner,
+.protocol li,
+.limit-card,
+.plug-card,
+.path-card,
+.partner-empty,
+.price-note {
+  background: #fff !important;
+  border-color: #ccc !important;
+  break-inside: avoid;
+}
+
+.dossier-hero {
+  background: #fff !important;
+  border-bottom: 0.4pt solid #ccc;
+}
+
+.home-page .table-wrap table,
+.decoder table {
+  display: table;
+  width: 100%;
 }

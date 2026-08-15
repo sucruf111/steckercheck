@@ -4,14 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>steckercheck.de — 800 W oder 2000 Wp, quellenbasiert, ohne Testsieger</title>
-  <meta name="description" content="800 VA begrenzt den Wechselrichter, 2000 Wp die Module. EEG § 8 Abs. 5a, Solarpaket I, MaStR. Quellenbasiert, ohne Ersparniszahlen.">
+  <meta name="description" content="800 VA begrenzt den Wechselrichter, 2000 Wp die Module. EEG § 8 Abs. 5a, Solarpaket I, MaStR. Quellenbasiert, ohne Ersparniszahlen. Checkliste zum Kauf ohne Testsieger.">
   <link rel="canonical" href="https://steckercheck.de/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta name="theme-color" content="#1a3d32">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="AC Beauty to Customer UG (haftungsbeschränkt)">
+  <meta name="geo.region" content="DE">
+  <meta name="geo.placename" content="Berlin">
+  <link rel="alternate" hreflang="de" href="https://steckercheck.de/">
+  <link rel="alternate" hreflang="de-DE" href="https://steckercheck.de/">
+  <link rel="alternate" hreflang="x-default" href="https://steckercheck.de/">
   <meta property="og:title" content="steckercheck.de — 800 W oder 2000 Wp, quellenbasiert, ohne Testsieger">
   <meta property="og:description" content="800 VA begrenzt den Wechselrichter, 2000 Wp die Module. EEG § 8 Abs. 5a, Solarpaket I, MaStR. Quellenbasiert, ohne Ersparniszahlen.">
   <meta property="og:url" content="https://steckercheck.de/">
   <meta property="og:locale" content="de_DE">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="steckercheck.de">
+  <meta property="og:image" content="https://steckercheck.de/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="steckercheck.de — 800 VA Wechselrichter, 2000 Wp Module">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="steckercheck.de — 800 W oder 2000 Wp">
+  <meta name="twitter:description" content="800 VA begrenzt den Wechselrichter, 2000 Wp die Module. Quellenbasiert, ohne Testsieger.">
+  <meta name="twitter:image" content="https://steckercheck.de/og.jpg">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="print.css" media="print">
   <script type="application/ld+json">
@@ -19,19 +37,59 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://steckercheck.de/#organization",
+      "name": "AC Beauty to Customer UG (haftungsbeschränkt)",
+      "alternateName": ["steckercheck.de", "steckercheck"],
+      "url": "https://steckercheck.de",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://steckercheck.de/favicon.svg"
+      },
+      "email": "contact@beauty2customer.com",
+      "telephone": "+49-176-45760626",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dovestraße 11",
+        "postalCode": "10587",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Deutschland"
+      }
+    },
+    {
       "@type": "WebSite",
+      "@id": "https://steckercheck.de/#website",
       "name": "steckercheck.de",
       "url": "https://steckercheck.de",
       "inLanguage": "de-DE",
+      "description": "Steckersolar in Deutschland, erklärt aus EEG, BNetzA und MaStR. Ohne Testsieger, ohne Ersparniszahlen.",
       "publisher": {
         "@id": "https://steckercheck.de/#organization"
       }
     },
     {
-      "@type": "Organization",
-      "@id": "https://steckercheck.de/#organization",
-      "name": "AC Beauty to Customer UG (haftungsbeschränkt)",
-      "url": "https://steckercheck.de"
+      "@type": "WebPage",
+      "@id": "https://steckercheck.de/#webpage",
+      "url": "https://steckercheck.de/",
+      "name": "800 W oder 2000 Wp?",
+      "description": "800 VA begrenzt den Wechselrichter, 2000 Wp die Module. Beide Grenzen stehen in EEG § 8 Abs. 5a.",
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://steckercheck.de/#website"
+      },
+      "about": ["Steckersolargerät", "Balkonkraftwerk", "800 VA", "2000 Wp"],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://steckercheck.de/og.jpg"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".board-note"]
+      }
     }
   ]
 }
@@ -42,12 +100,16 @@
   <header class="site-header">
     <div class="site-header-inner">
       <div class="brand">
-        <a class="wordmark" href="index.html">steckercheck<span>.de</span></a>
+        <a class="wordmark" href="index.html">
+          <img class="brand-mark" src="favicon.svg" width="28" height="28" alt="">
+          steckercheck<span>.de</span>
+        </a>
         <p class="tagline">Steckersolar, erklärt.</p>
       </div>
       <nav class="nav" aria-label="Hauptnavigation">
         <a href="index.html" aria-current="page">Start</a>
         <a href="800-watt-2000-wp.html">800 W / 2000 Wp</a>
+        <a href="balkonkraftwerk-kaufen.html">Bezug</a>
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>
@@ -74,7 +136,7 @@
             <p class="board-desc">installierte Leistung</p>
           </div>
         </div>
-        <p class="board-note">Beide Grenzen stehen in EEG § 8 Abs. 5a (Solarpaket I, 16. Mai 2024; BNetzA-FAQ). MaStR bleibt Pflicht.</p>
+        <p class="board-note">Beide Grenzen stehen in EEG § 8 Abs. 5a (Solarpaket I, 16. Mai 2024; BNetzA-FAQ). MaStR bleibt Pflicht. 800 VA und 2000 Wp messen nicht dasselbe.</p>
 
         <div class="table-wrap">
           <table>
@@ -110,19 +172,37 @@
           <li>800 W in der Steckdose ≠ 800 W vom Modul</li>
         </ul>
 
-        <p class="home-cta">
-          <a class="btn-primary" href="800-watt-2000-wp.html">Die zwei Grenzen erklärt</a>
-        </p>
+        <div class="paths">
+          <a class="path-card" href="800-watt-2000-wp.html">
+            <h2>Die zwei Grenzen</h2>
+            <p>EEG, MaStR, Miete, Schuko, FAQ. Die lange Erklärung mit Quellen.</p>
+            <span class="path-go">Lesen</span>
+          </a>
+          <a class="path-card" href="balkonkraftwerk-kaufen.html">
+            <h2>Bezug, ohne Testsieger</h2>
+            <p>Sechs Prüfpunkte vor der Bestellung. Partnerlinks nur nach Annahme, als Werbung.</p>
+            <span class="path-go">Checkliste</span>
+          </a>
+        </div>
+        <p class="home-note">Ohmnify / MaStR zum 15.08.2026: 1.472.829 Steckersolar-Geräte in Betrieb. Keine Ersparniszahlen auf dieser Seite.</p>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
-      <span class="publisher">AC Beauty to Customer UG (haftungsbeschränkt), Berlin</span>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="impressum.html#affiliate">Werbung</a>
+      <div class="footer-brand">
+        <a class="wordmark" href="index.html">steckercheck<span>.de</span></a>
+        <p>Steckersolar aus EEG, BNetzA und MaStR. Berlin.</p>
+        <span class="publisher">AC Beauty to Customer UG (haftungsbeschränkt)</span>
+      </div>
+      <nav class="footer-nav" aria-label="Fußzeile">
+        <a href="800-watt-2000-wp.html">800 W / 2000 Wp</a>
+        <a href="balkonkraftwerk-kaufen.html">Bezug</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html#affiliate">Werbung</a>
+      </nav>
     </div>
   </footer>
 </body>
