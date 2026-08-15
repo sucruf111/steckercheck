@@ -328,29 +328,32 @@ body.home {
 
 .orbits {
   position: relative;
-  min-height: 22rem;
+  min-height: 0;
 }
 
-.orbit {
-  position: absolute;
+.hero-fig {
+  margin: 0;
+  position: relative;
+  border-radius: 1.6rem;
+  overflow: hidden;
   border: 1px solid rgba(215, 255, 94, 0.16);
-  border-radius: 50%;
+  background: var(--void-2);
 }
 
-.orbit-a {
-  inset: 8% 10%;
-}
-
-.orbit-b {
-  inset: 22% 24%;
+.hero-fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 933;
+  object-fit: cover;
 }
 
 .num-card {
   position: absolute;
-  background: rgba(11, 28, 20, 0.78);
+  background: rgba(11, 28, 20, 0.82);
   border: 1px solid rgba(215, 255, 94, 0.22);
   border-radius: var(--radius);
-  padding: 1.15rem 1.25rem 1.2rem;
+  padding: 0.85rem 1rem 0.9rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
 }
@@ -369,7 +372,7 @@ body.home {
   display: block;
   font-family: var(--display);
   font-optical-sizing: auto;
-  font-size: clamp(3rem, 6vw, 4.3rem);
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 0.9;
@@ -579,10 +582,25 @@ main {
   margin-right: 0.45em;
 }
 
-.dossier {
-  width: min(var(--max), calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 2.4rem 0 4rem;
+.frame {
+  margin: 0.75rem 0 1.5rem;
+  max-width: none;
+}
+
+.frame img,
+.frame svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  background: var(--void);
+}
+
+.frame figcaption {
+  margin: 0.55rem 0 0;
+  font-size: 0.88rem;
+  color: var(--mist);
+  max-width: 62ch;
 }
 
 .toc {
@@ -1098,14 +1116,8 @@ address {
     padding-top: 2rem;
   }
 
-  .num-card.one {
-    left: 0;
-    top: 0;
-  }
-
-  .num-card.two {
-    right: 0;
-    bottom: 0;
+  .num-card {
+    display: none;
   }
 
   .home-page .table-wrap,

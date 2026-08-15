@@ -53,9 +53,7 @@ a {
   word-break: break-all;
 }
 
-.protocol li,
-.limit-card,
-.path-card,
-.tile {
+.hero-fig,
+.frame {
   break-inside: avoid;
 }
