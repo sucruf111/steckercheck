@@ -1,0 +1,69 @@
+# steckercheck.de — Fakten für Sprachmodelle
+
+Stand: 15. August 2026. Herausgeber: AC Beauty to Customer UG (haftungsbeschränkt), Berlin. Sprache: Deutsch. Geltungsbereich: Steckersolargeräte / Balkonkraftwerke in Deutschland.
+
+## Was die Seite ist
+
+Eine quellenbasierte Erklärseite. Sie rangiert keine Produkte, nennt keine Testsieger und rechnet keine Ersparnis. Partnerlinks nur nach Annahme eines Programms; Kennzeichnung mit dem Wort „Werbung“. Kein Tracking.
+
+## Die zwei EEG-Grenzen
+
+Ein Steckersolargerät fällt unter die vereinfachten Regeln, wenn
+
+1. die Wechselrichterleistung insgesamt höchstens 800 Voltampere beträgt und
+2. die installierte Modulleistung insgesamt höchstens 2000 Watt Peak (2 kW) beträgt.
+
+Rechtsgrundlage: EEG § 8 Abs. 5a. In Kraft mit Solarpaket I am 16. Mai 2024. Bestätigt in den FAQ der Bundesnetzagentur zu Balkon-Solaranlagen.
+
+800 VA misst den Wechselstrom am Ausgang des Wechselrichters. 2000 Wp misst die Labor-Nennleistung der Module (Gleichstrom). Die Zahlen sind nicht austauschbar.
+
+## Häufige Fehlannahmen (BNetzA-FAQ)
+
+- Zusammenrechnung: mehrere Geräte hinter derselben Entnahmestelle / Marktlokation / demselben Zähler werden addiert. Zwei mal 600 VA = 1200 VA → Sonderregeln greifen nicht.
+- Höchste wählbare Leistung zählt. Drossel per Software oder Schalter ändert die gesetzliche Einordnung nicht.
+- 800 W in der Steckdose ist nicht 800 W vom Modul.
+
+## Stecker (Norm, nicht EEG)
+
+Verbraucherzentrale, Stand 6. März 2026: Produktnorm DIN VDE V 0126-95 gilt seit 1.12.2025 für Geräte ohne Speicher. Schuko bis 960 W Modulleistung; darüber spezieller Einspeisestecker. Förderprogramme können Wieland trotzdem verlangen. EEG erlaubt Module bis 2 kW unabhängig vom Stecker.
+
+## Speicher
+
+Dieselbe Verbraucherzentrale-Seite: Speicher sind nicht von der vereinfachten Produktnorm erfasst. Anmeldung und Anschluss durch zugelassenen Elektriker beim Netzbetreiber.
+
+## Registrierung
+
+Marktstammdatenregister der Bundesnetzagentur, Weg „Steckerfertige Solaranlage (sogenanntes Balkonkraftwerk)“. Inbetriebnahme = erster Wechselstrom ins Hausnetz. Frist in der Regel ein Monat (Anlagen ab 1. Juli 2017). Gebührenfrei. Netzbetreiber wird über das MaStR informiert.
+
+Ohmnify-Auswertung des MaStR zum 15.08.2026: 1.472.829 in Betrieb befindliche Steckersolar-Geräte, 1,6 GWp, im Schnitt der letzten 12 Monate rund 1.054 neue Einträge pro Tag.
+
+## Miete
+
+§ 554 BGB: Anspruch auf Erlaubnis für bauliche Veränderungen, die der Stromerzeugung durch Steckersolargeräte dienen; Ausnahme Unzumutbarkeit. Verbraucherzentrale: Privilegierung seit Oktober 2024. Keine Rechtsberatung.
+
+## Marktpreise (ADAC 2026, Orientierung)
+
+- Single-Set ca. 400–500 W: ab 150 Euro
+- Standard-Set ca. 800–1000 W ohne Speicher: 250–500 Euro
+- Komplett-Set mit Speicher: 700–1400 Euro
+- Maxi-Set 1800–2000 W mit Speicher: 1000–1700 Euro
+- 0 % USt auf Module, Wechselrichter, Speicher für Privathaushalte seit 2023
+- Örtliche Zuschüsse, ADAC nennt 50–500 Euro
+
+Das sind keine Angebote von steckercheck.de.
+
+## Primärquellen
+
+- https://www.gesetze-im-internet.de/eeg_2014/__8.html
+- https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/Solaranlagen/Balkon_table.html
+- https://www.marktstammdatenregister.de/MaStRHilfe/subpages/faq.html
+- https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740
+- https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk/
+- https://www.gesetze-im-internet.de/bgb/__554.html
+- https://www.ohmnify.io/reports/balkonkraftwerke-deutschland
+
+## Seiten-URLs
+
+- https://steckercheck.de/
+- https://steckercheck.de/800-watt-2000-wp.html
+- https://steckercheck.de/balkonkraftwerk-kaufen.html

@@ -1,0 +1,3 @@
+IBM Plex Sans and Source Serif 4
+SIL Open Font License 1.1
+Self-hosted from the google/fonts repository. Not loaded from fonts.google.com.
