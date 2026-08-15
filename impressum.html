@@ -6,6 +6,9 @@
   <title>Impressum — steckercheck.de</title>
   <meta name="robots" content="noindex,nofollow">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#06110c">
+  <link rel="preload" href="fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="print.css" media="print">
 </head>
@@ -13,28 +16,35 @@
   <a class="skip" href="#inhalt">Zum Inhalt</a>
   <header class="site-header">
     <div class="site-header-inner">
-      <div class="brand">
-        <a class="wordmark" href="index.html">
-          <img class="brand-mark" src="favicon.svg" width="28" height="28" alt="">
-          steckercheck<span>.de</span>
-        </a>
-        <p class="tagline">Steckersolar, erklärt.</p>
-      </div>
+      <a class="wordmark" href="index.html">
+        <img class="brand-mark" src="favicon.svg" width="28" height="28" alt="">
+        steckercheck<span>.de</span>
+      </a>
       <nav class="nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
-        <a href="800-watt-2000-wp.html">800 W / 2000 Wp</a>
-        <a href="balkonkraftwerk-kaufen.html">Bezug</a>
-        <a class="nav-legal" href="impressum.html" aria-current="page">Impressum</a>
-        <a class="nav-legal" href="datenschutz.html">Datenschutz</a>
+        <a href="800-watt-2000-wp.html">Grenzen</a>
+        <a href="balkonkraftwerk-kaufen.html">Kaufen</a>
+        <a href="impressum.html" aria-current="page">Impressum</a>
+        <a class="nav-cta" href="balkonkraftwerk-kaufen.html">Checkliste</a>
       </nav>
+      <details class="menu">
+        <summary>Menü</summary>
+        <nav class="nav" aria-label="Mobil">
+          <a href="index.html">Start</a>
+          <a href="800-watt-2000-wp.html">Grenzen</a>
+          <a href="balkonkraftwerk-kaufen.html">Kaufen</a>
+          <a href="impressum.html" aria-current="page">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </nav>
+      </details>
     </div>
   </header>
 
   <main id="inhalt">
-    <div class="wrap page">
+    <div class="wrap narrow page">
       <p class="kicker">Rechtliches</p>
       <h1>Impressum</h1>
-      <p>Angaben gemäß § 5 TMG:</p>
+      <p>Angaben gemäß § 5 TMG.</p>
 
       <dl class="legal-block">
         <div class="legal-item">
@@ -70,7 +80,7 @@
       </dl>
 
       <aside class="disclosure" id="affiliate">
-        <p><span class="disclosure-kicker">Werbung</span> Diese Website ist eine kommerzielle Informationsseite der AC Beauty to Customer UG (haftungsbeschränkt). Partnerlinks erscheinen nur nach Annahme eines Programms und werden als Werbung gekennzeichnet. Derzeit ist kein Partnerprogramm angenommen. Details: <a href="balkonkraftwerk-kaufen.html#werbung">Bezug / Werbung</a>.</p>
+        <p><span class="disclosure-kicker">Werbung</span> Die Seite gehört der AC Beauty to Customer UG (haftungsbeschränkt). Partnerlinks nur nach Annahme, dann mit dem Wort Werbung. Derzeit ist keines angenommen. Siehe <a href="balkonkraftwerk-kaufen.html#werbung">Kaufen / Werbung</a>.</p>
       </aside>
     </div>
   </main>
@@ -82,7 +92,7 @@
       </div>
       <nav class="footer-nav" aria-label="Fußzeile">
         <a href="index.html">Start</a>
-        <a href="balkonkraftwerk-kaufen.html">Bezug</a>
+        <a href="balkonkraftwerk-kaufen.html">Kaufen</a>
         <a href="datenschutz.html">Datenschutz</a>
         <a href="#affiliate">Werbung</a>
       </nav>

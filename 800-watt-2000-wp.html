@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://steckercheck.de/og.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon.svg">
-  <meta name="theme-color" content="#1a3d32">
+  <meta name="theme-color" content="#06110c">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="author" content="AC Beauty to Customer UG (haftungsbeschränkt)">
   <meta name="geo.region" content="DE">
@@ -30,6 +30,8 @@
   <link rel="alternate" hreflang="de" href="https://steckercheck.de/800-watt-2000-wp.html">
   <link rel="alternate" hreflang="de-DE" href="https://steckercheck.de/800-watt-2000-wp.html">
   <link rel="alternate" hreflang="x-default" href="https://steckercheck.de/800-watt-2000-wp.html">
+  <link rel="preload" href="fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="print.css" media="print">
   <script type="application/ld+json">
@@ -165,34 +167,41 @@
   <a class="skip" href="#inhalt">Zum Inhalt</a>
   <header class="site-header">
     <div class="site-header-inner">
-      <div class="brand">
-        <a class="wordmark" href="index.html">
-          <img class="brand-mark" src="favicon.svg" width="28" height="28" alt="">
-          steckercheck<span>.de</span>
-        </a>
-        <p class="tagline">Steckersolar, erklärt.</p>
-      </div>
+      <a class="wordmark" href="index.html">
+        <img class="brand-mark" src="favicon.svg" width="28" height="28" alt="">
+        steckercheck<span>.de</span>
+      </a>
       <nav class="nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
-        <a href="800-watt-2000-wp.html" aria-current="page">800 W / 2000 Wp</a>
-        <a href="balkonkraftwerk-kaufen.html">Bezug</a>
+        <a href="800-watt-2000-wp.html" aria-current="page">Grenzen</a>
+        <a href="balkonkraftwerk-kaufen.html">Kaufen</a>
         <a class="nav-legal" href="impressum.html">Impressum</a>
-        <a class="nav-legal" href="datenschutz.html">Datenschutz</a>
+        <a class="nav-cta" href="balkonkraftwerk-kaufen.html">Checkliste</a>
       </nav>
+      <details class="menu">
+        <summary>Menü</summary>
+        <nav class="nav" aria-label="Mobil">
+          <a href="index.html">Start</a>
+          <a href="800-watt-2000-wp.html" aria-current="page">Grenzen</a>
+          <a href="balkonkraftwerk-kaufen.html">Kaufen</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </nav>
+      </details>
     </div>
   </header>
 
   <main id="inhalt">
-    <article class="wrap wide prose">
-      <header class="article-header">
-        <p class="kicker">Erklärung</p>
-        <h1>800 W oder 2000 Wp? Was die zwei Zahlen beim Balkonkraftwerk bedeuten</h1>
-        <p class="meta">Stand August 2026 · Quellen am Ende</p>
-      </header>
+    <header class="page-hero">
+      <div class="page-hero-inner">
+        <p class="eyebrow">Erklärung · August 2026</p>
+        <h1>800 W oder 2000 Wp?</h1>
+        <p class="lede">Auf dem Karton stehen oft beide Zahlen. Im Gesetz auch. Sie beschreiben trotzdem zwei verschiedene Dinge: was der Wechselrichter abgeben darf, und wie groß die Module sein dürfen.</p>
+      </div>
+    </header>
+    <article class="wrap narrow prose">
 
-      <p>Ein Steckersolargerät fällt unter die vereinfachten EEG-Regeln, wenn die Wechselrichterleistung insgesamt höchstens 800 VA und die installierte Modulleistung insgesamt höchstens 2000 Wp beträgt. Das steht in EEG § 8 Abs. 5a. Das Solarpaket I hat diese Grenzen zum 16. Mai 2024 in Kraft gesetzt; die Bundesnetzagentur (BNetzA) bestätigt sie in ihren FAQ zu Balkon-Solaranlagen. Die Registrierung im Marktstammdatenregister (MaStR) bleibt Pflicht, eine Extra-Meldung beim Netzbetreiber darf dafür nicht verlangt werden.</p>
-
-      <p>800 VA begrenzt den Wechselstrom ins Hausnetz. 2000 Wp begrenzt die Größe des Generators. Wer die Zahlen vertauscht oder ein zweites Gerät hinter derselben Entnahmestelle dazusteckt, kann aus den Sonderregeln fallen. Keine Ersparnis- oder Ertragszahlen, keine Rechtsberatung. Die häufigsten Nachfragen stehen in den <a href="#faq">FAQ zu 800 VA, 2000 Wp, MaStR und Miete</a>.</p>
+      <p>Ein Steckersolargerät kommt in die vereinfachten EEG-Regeln, wenn der Wechselrichter insgesamt höchstens 800&nbsp;VA kann und die Module zusammen höchstens 2000&nbsp;Wp haben. Das steht in EEG §&nbsp;8 Abs.&nbsp;5a, seit dem Solarpaket I vom 16. Mai 2024. Die Bundesnetzagentur wiederholt es in den FAQ. Ins Marktstammdatenregister müssen Sie trotzdem. Den Netzbetreiber extra anschreiben dürfen die in den Grenzen nicht mehr verlangen, wenn Sie auf Einspeisevergütung verzichten.</p>
 
       <blockquote class="pull">
         <p>800 VA und 2000 Wp messen nicht dasselbe.</p>
@@ -329,7 +338,7 @@
       </ol>
 
       <p class="cta-row">
-        <a class="btn-primary" href="balkonkraftwerk-kaufen.html">Bezug: Checkliste vor dem Kauf</a>
+        <a class="btn" href="balkonkraftwerk-kaufen.html">Checkliste vor dem Kauf</a>
       </p>
     </article>
   </main>
@@ -338,12 +347,12 @@
     <div class="site-footer-inner">
       <div class="footer-brand">
         <a class="wordmark" href="index.html">steckercheck<span>.de</span></a>
-        <p>Steckersolar aus EEG, BNetzA und MaStR. Berlin.</p>
+        <p>Berlin. EEG, BNetzA, MaStR — nicht der Shop-Titel.</p>
         <span class="publisher">AC Beauty to Customer UG (haftungsbeschränkt)</span>
       </div>
       <nav class="footer-nav" aria-label="Fußzeile">
         <a href="index.html">Start</a>
-        <a href="balkonkraftwerk-kaufen.html">Bezug</a>
+        <a href="balkonkraftwerk-kaufen.html">Kaufen</a>
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>
