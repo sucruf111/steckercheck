@@ -179,6 +179,12 @@ a:focus-visible,
   text-decoration: none;
 }
 
+@media (max-width: 720px) {
+  .nav-legal {
+    display: none;
+  }
+}
+
 /* —— Page frame —— */
 main {
   flex: 1;
@@ -1215,7 +1221,7 @@ section.faq > h2 {
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 1.1rem;
+  gap: 0.45rem 1.25rem;
 }
 
 /* —— Homepage paths —— */
@@ -1295,7 +1301,7 @@ body.bezug main {
   max-width: 18ch;
   font-size: clamp(2.05rem, 5.2vw, 3.15rem);
   letter-spacing: -0.035em;
-  line-height: 1.08;
+  line-height: 1.14;
   margin: 0 0 0.85rem;
 }
 
@@ -1322,9 +1328,10 @@ body.bezug main {
 
 .ad-banner {
   margin: 0 0 0.25rem;
-  padding: 0.85rem 1rem;
+  padding: 0.95rem 1.1rem;
   background: var(--accent-soft);
-  border-left: 3px solid var(--accent);
+  border: 1px solid #c5d4cb;
+  border-left: 4px solid var(--accent);
   color: var(--ink);
   font-size: 0.88rem;
   line-height: 1.5;
@@ -1558,10 +1565,10 @@ body.bezug main {
 }
 
 .partner-slot {
-  min-height: 6.2rem;
-  border: 1px dashed var(--hairline);
+  min-height: 7rem;
+  border: 1px dashed #b7ae98;
   background: var(--well);
-  padding: 0.85rem 0.9rem;
+  padding: 0.95rem 1rem;
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.4;
