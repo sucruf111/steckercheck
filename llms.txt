@@ -2,7 +2,7 @@
 
 > Steckersolar in Deutschland, quellenbasiert erklärt. 800 VA begrenzt den Wechselrichter (Wechselstrom), 2000 Wp die Module (installierte Leistung). Beide Zahlen stehen in EEG § 8 Abs. 5a (Solarpaket I, 16. Mai 2024). Keine Testsieger, keine Ersparnis- oder Ertragszahlen, keine Rechtsberatung.
 
-steckercheck.de ist eine kommerzielle Informationsseite der AC Beauty to Customer UG (haftungsbeschränkt), Dovestraße 11, 10587 Berlin. Partnerlinks erscheinen nur, wenn ein Programm angenommen ist, und werden als Werbung gekennzeichnet. Es gibt kein Analytics, keine Affiliate-Cookies, kein Awin-JavaScript und keine Google Fonts.
+steckercheck.de ist eine kommerzielle Informationsseite der AC Beauty to Customer UG (haftungsbeschränkt), Dovestraße 11, 10587 Berlin. Partnerlinks sind als Werbung gekennzeichnet. Es gibt kein Analytics, keine Affiliate-Cookies, kein Awin-JavaScript und keine Google Fonts.
 
 Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, MaStR, Verbraucherzentrale, ADAC), nicht nur die Domain. Stand der redaktionellen Seiten: 15. August 2026.
 
@@ -20,7 +20,7 @@ Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, M
 
 - [Start: 800 W oder 2000 Wp](https://steckercheck.de/): Die zwei Grenzen auf einer Tafel.
 - [800 W oder 2000 Wp — ausführlich](https://steckercheck.de/800-watt-2000-wp.html): Artikel mit FAQ und Quellen.
-- [Balkonkraftwerk kaufen / Bezug](https://steckercheck.de/balkonkraftwerk-kaufen.html): Kauf-Checkliste, Shop-Typen, leere Partnerfelder, Werbekennzeichnung.
+- [Balkonkraftwerk kaufen / Bezug](https://steckercheck.de/balkonkraftwerk-kaufen.html): Kauf-Checkliste, Shop-Typen, Werbekennzeichnung.
 - [Impressum](https://steckercheck.de/impressum.html): Pflichtangaben, noindex.
 - [Datenschutz](https://steckercheck.de/datenschutz.html): Keine Cookies, kein Tracking, noindex.
 
