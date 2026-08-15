@@ -1,0 +1,94 @@
+/* Print: paper, no chrome noise */
+@page {
+  margin: 18mm 16mm;
+}
+
+body {
+  background: #fff;
+  color: #111;
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.skip,
+.nav,
+.continue,
+.site-footer a[href="#affiliate"] {
+  display: none !important;
+}
+
+.site-header {
+  border-top: 2pt solid #1a3d32;
+  border-bottom: 0.4pt solid #ccc;
+  background: #fff;
+}
+
+.hero,
+.story,
+.story-card li {
+  background: #fff;
+  border-color: #ccc;
+}
+
+a {
+  color: #111;
+  text-decoration: underline;
+}
+
+.prose a[href^="http"]::after,
+.sources a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  font-size: 0.85em;
+  word-break: break-all;
+}
+
+.table-wrap::after {
+  display: none;
+}
+
+.table-wrap {
+  overflow: visible;
+  box-shadow: none;
+}
+
+h1, h2, h3 {
+  break-after: avoid;
+}
+
+/* Article table: print as a table, not stacked phone cards */
+.prose .table-wrap table {
+  display: table;
+  width: 100%;
+}
+
+.prose .table-wrap thead {
+  display: table-header-group;
+}
+
+.prose .table-wrap tbody {
+  display: table-row-group;
+}
+
+.prose .table-wrap tr {
+  display: table-row;
+  background: transparent;
+  border: 0;
+}
+
+.prose .table-wrap td {
+  display: table-cell;
+}
+
+.prose .table-wrap td::before {
+  content: none !important;
+}
+
+.prose > h2 + ol:not(.sources) {
+  break-inside: avoid;
+}
+
+.prose > h2,
+.faq-item,
+section.faq {
+  scroll-margin-top: 0;
+}
