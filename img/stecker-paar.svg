@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="plugTitle plugDesc">
+  <title id="plugTitle">Schuko und Energiesteckvorrichtung</title>
+  <desc id="plugDesc">Links ein Schuko-Stecker für Modulleistung bis 960 Watt, rechts eine Energiesteckvorrichtung für größere Modulsummen.</desc>
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1e15"/>
+      <stop offset="1" stop-color="#06110c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#pbg)"/>
+  <line x1="600" y1="90" x2="600" y2="640" stroke="#d7ff5e" stroke-opacity="0.14" stroke-width="2"/>
+
+  <!-- Schuko -->
+  <g>
+    <circle cx="300" cy="330" r="180" fill="#f4f6f2"/>
+    <circle cx="300" cy="330" r="140" fill="#dbe3da"/>
+    <circle cx="245" cy="330" r="17" fill="#101714"/>
+    <circle cx="355" cy="330" r="17" fill="#101714"/>
+    <rect x="282" y="196" width="36" height="26" rx="6" fill="#8fa396"/>
+    <rect x="282" y="438" width="36" height="26" rx="6" fill="#8fa396"/>
+    <text x="300" y="590" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" font-weight="650" fill="#f4f6f2">Schuko</text>
+    <text x="300" y="632" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#9fb8a8">bis 960 W Modulleistung</text>
+  </g>
+
+  <!-- Energiesteckvorrichtung -->
+  <g>
+    <circle cx="900" cy="330" r="180" fill="#f4f6f2"/>
+    <circle cx="900" cy="330" r="140" fill="#dbe3da"/>
+    <path d="M900 190 l26 34 h-52 z" fill="#8fa396"/>
+    <circle cx="900" cy="272" r="15" fill="#101714"/>
+    <circle cx="848" cy="362" r="15" fill="#101714"/>
+    <circle cx="952" cy="362" r="15" fill="#101714"/>
+    <circle cx="900" cy="330" r="176" fill="none" stroke="#d7ff5e" stroke-opacity="0.5" stroke-width="5" stroke-dasharray="10 14"/>
+    <text x="900" y="590" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" font-weight="650" fill="#f4f6f2">Energiesteckvorrichtung</text>
+    <text x="900" y="632" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#9fb8a8">über 960 W Modulleistung</text>
+  </g>
+
+  <text x="600" y="726" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#6f8a7c">Produktnorm DIN VDE V 0126-95 · Stand Verbraucherzentrale, 6. März 2026</text>
+</svg>
