@@ -65,5 +65,5 @@ Das sind keine Angebote von steckercheck.de.
 ## Seiten-URLs
 
 - https://steckercheck.de/
-- https://steckercheck.de/800-watt-2000-wp.html
-- https://steckercheck.de/balkonkraftwerk-kaufen.html
+- https://steckercheck.de/800-watt-2000-wp
+- https://steckercheck.de/balkonkraftwerk-kaufen
