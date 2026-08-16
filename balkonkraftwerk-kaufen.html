@@ -304,7 +304,7 @@
       </div>
     </header>
 
-    <article class="dossier" id="dossier">
+    <article class="wrap dossier" id="dossier">
       <nav aria-label="Auf dieser Seite">
         <ol class="toc">
           <li><a href="#protokoll">Sechs Prüfpunkte</a></li>
@@ -351,7 +351,7 @@
       <h2 id="grenzen">Warum 800 VA und 2000 Wp zusammen genannt werden</h2>
       <p>800&nbsp;VA beschreiben den Wechselstrom, der ins Hausnetz darf. 2000&nbsp;Wp beschreiben, wie groß der Generator sein darf. Wer die Zahlen vertauscht, erwartet 2000&nbsp;W in der Steckdose oder fällt aus den vereinfachten Regeln. Die längere Erklärung steht im Artikel <a href="800-watt-2000-wp.html">800&nbsp;W oder 2000&nbsp;Wp</a>.</p>
       <figure class="frame">
-        <img src="img/schema-geraet.svg" width="1200" height="800" alt="Schema: Module liefern Gleichstrom an den Wechselrichter, der höchstens 800 VA in die Steckdose abgibt">
+        <img src="img/schema-geraet.svg" width="1200" height="560" alt="Schema: Module liefern Gleichstrom an den Wechselrichter, der höchstens 800 VA in die Steckdose abgibt">
         <figcaption>Die Module liefern Gleichstrom, angegeben als Laborwert in Watt Peak. Der Wechselrichter gibt höchstens 800&nbsp;VA Wechselstrom ins Hausnetz ab.</figcaption>
       </figure>
 
@@ -371,7 +371,7 @@
       <h2 id="stecker">Schuko oder Wieland: Produktnorm und EEG</h2>
       <p>Die EEG-Sonderregeln erlauben Module bis 2&nbsp;kW, unabhängig vom Stecker. Welche Steckvorrichtung zur Modulsumme passt, steht in der Produktnorm. Förderstellen können strenger sein als das Gesetz.</p>
       <figure class="frame">
-        <img src="img/stecker-paar.svg" width="1200" height="800" alt="Links ein Schuko-Haushaltsstecker, rechts eine runde Energiesteckvorrichtung">
+        <img src="img/stecker-paar.svg" width="1200" height="520" alt="Links ein Schuko-Haushaltsstecker, rechts eine runde Energiesteckvorrichtung">
         <figcaption>Links ein Schuko-Stecker, laut Verbraucherzentrale bis 960&nbsp;W Modulleistung. Rechts eine Energiesteckvorrichtung für die größere Modulsumme.</figcaption>
       </figure>
       <div class="split-plug">
@@ -400,29 +400,29 @@
           </thead>
           <tbody>
             <tr>
-              <td>Wechselrichter AC</td>
-              <td>Ausgang, rated output, höchste wählbare VA/W</td>
-              <td>≤ 800 VA</td>
+              <td data-label="Feld">Wechselrichter AC</td>
+              <td data-label="Wonach Sie suchen">Ausgang, rated output, höchste wählbare VA/W</td>
+              <td data-label="Grenze für den vereinfachten Weg">≤ 800 VA</td>
             </tr>
             <tr>
-              <td>Module DC</td>
-              <td>Wp je Modul × Anzahl = installierte Leistung</td>
-              <td>≤ 2000 Wp</td>
+              <td data-label="Feld">Module DC</td>
+              <td data-label="Wonach Sie suchen">Wp je Modul × Anzahl = installierte Leistung</td>
+              <td data-label="Grenze für den vereinfachten Weg">≤ 2000 Wp</td>
             </tr>
             <tr>
-              <td>Stecker</td>
-              <td>Schuko oder Energiesteckvorrichtung</td>
-              <td>Schuko laut Verbraucherzentrale bis 960 W</td>
+              <td data-label="Feld">Stecker</td>
+              <td data-label="Wonach Sie suchen">Schuko oder Energiesteckvorrichtung</td>
+              <td data-label="Grenze für den vereinfachten Weg">Schuko laut Verbraucherzentrale bis 960 W</td>
             </tr>
             <tr>
-              <td>Normhinweis</td>
-              <td>DIN VDE V 0126-95 (Geräte ohne Speicher)</td>
-              <td>gilt seit 1. Dezember 2025</td>
+              <td data-label="Feld">Normhinweis</td>
+              <td data-label="Wonach Sie suchen">DIN VDE V 0126-95 (Geräte ohne Speicher)</td>
+              <td data-label="Grenze für den vereinfachten Weg">gilt seit 1. Dezember 2025</td>
             </tr>
             <tr>
-              <td>Lieferumfang</td>
-              <td>Halterung, Kabel und Stecker, getrennt vom Werbefoto aufgelistet</td>
-              <td>muss zur Montage passen</td>
+              <td data-label="Feld">Lieferumfang</td>
+              <td data-label="Wonach Sie suchen">Halterung, Kabel und Stecker, getrennt vom Werbefoto aufgelistet</td>
+              <td data-label="Grenze für den vereinfachten Weg">muss zur Montage passen</td>
             </tr>
           </tbody>
         </table>
@@ -519,7 +519,7 @@
 
       <p class="cta-row">
         <a class="btn" href="800-watt-2000-wp.html">Artikel zu 800 W und 2000 Wp</a>
-        <a class="btn-ghost" href="#werbung" style="color:var(--ink);border-color:var(--line-strong)">Werbehinweis</a>
+        <a class="btn-ghost" href="#werbung">Werbehinweis</a>
       </p>
     </article>
   </main>
