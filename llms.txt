@@ -19,10 +19,10 @@ Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, M
 ## Seiten
 
 - [Start: 800 W oder 2000 Wp](https://steckercheck.de/): Die zwei Grenzen auf einer Tafel.
-- [800 W oder 2000 Wp — ausführlich](https://steckercheck.de/800-watt-2000-wp.html): Artikel mit FAQ und Quellen.
-- [Balkonkraftwerk kaufen / Bezug](https://steckercheck.de/balkonkraftwerk-kaufen.html): Kauf-Checkliste, Shop-Typen, Werbekennzeichnung.
-- [Impressum](https://steckercheck.de/impressum.html): Pflichtangaben, noindex.
-- [Datenschutz](https://steckercheck.de/datenschutz.html): Keine Cookies, kein Tracking, noindex.
+- [800 W oder 2000 Wp — ausführlich](https://steckercheck.de/800-watt-2000-wp): Artikel mit FAQ und Quellen.
+- [Balkonkraftwerk kaufen / Bezug](https://steckercheck.de/balkonkraftwerk-kaufen): Kauf-Checkliste, Shop-Typen, Werbekennzeichnung.
+- [Impressum](https://steckercheck.de/impressum): Pflichtangaben, noindex.
+- [Datenschutz](https://steckercheck.de/datenschutz): Keine Cookies, kein Tracking, noindex.
 
 ## Optional
 
