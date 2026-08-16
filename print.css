@@ -54,6 +54,13 @@ a {
 }
 
 .hero-fig,
-.frame {
+.frame,
+.flow,
+.table-wrap {
   break-inside: avoid;
+}
+
+.flow {
+  background: #111 !important;
+  color: #fff !important;
 }

@@ -207,7 +207,23 @@
         <p>800 VA gelten für den Wechselrichter, 2000 Wp für die Module.</p>
       </blockquote>
       <figure class="frame">
-        <img src="img/fluss.svg" width="960" height="280" alt="Kette: Module bis 2000 Wp, Wechselrichter höchstens 800 VA, Steckdose im Hausnetz">
+        <ol class="flow">
+          <li>
+            <span class="flow-label">Module</span>
+            <strong>bis 2000 Wp</strong>
+            <span class="flow-meta">Gleichstrom · Laborwert</span>
+          </li>
+          <li>
+            <span class="flow-label">Wechselrichter</span>
+            <strong>max. 800 VA</strong>
+            <span class="flow-meta">Wechselstrom ins Haus</span>
+          </li>
+          <li>
+            <span class="flow-label">Steckdose</span>
+            <strong>Hausnetz</strong>
+            <span class="flow-meta">nicht 2000 W in der Dose</span>
+          </li>
+        </ol>
         <figcaption>Watt Peak beschreiben den Generator. Voltampere beschreiben, was in der Leitung ankommt. Quelle: EEG § 8 Abs. 5a.</figcaption>
       </figure>
 
@@ -225,16 +241,16 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>800 W / 800 VA</strong></td>
-              <td>Ausgang des Wechselrichters (Wechselstrom)</td>
-              <td>EEG § 8 Abs. 5a</td>
-              <td>wie viel Leistung ins Hausnetz darf</td>
+              <td data-label="Zahl"><strong>800 W / 800 VA</strong></td>
+              <td data-label="Was sie misst">Ausgang des Wechselrichters (Wechselstrom)</td>
+              <td data-label="Wo sie steht">EEG § 8 Abs. 5a</td>
+              <td data-label="Was sie begrenzt">wie viel Leistung ins Hausnetz darf</td>
             </tr>
             <tr>
-              <td><strong>2000 Wp / 2 kW</strong></td>
-              <td>installierte Leistung der Module (Gleichstrom, Laborwert)</td>
-              <td>EEG § 8 Abs. 5a</td>
-              <td>wie groß der Generator sein darf</td>
+              <td data-label="Zahl"><strong>2000 Wp / 2 kW</strong></td>
+              <td data-label="Was sie misst">installierte Leistung der Module (Gleichstrom, Laborwert)</td>
+              <td data-label="Wo sie steht">EEG § 8 Abs. 5a</td>
+              <td data-label="Was sie begrenzt">wie groß der Generator sein darf</td>
             </tr>
           </tbody>
         </table>

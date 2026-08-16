@@ -111,7 +111,7 @@
   <main id="inhalt">
     <section class="stage">
       <div class="stage-inner">
-        <div>
+        <div class="stage-copy">
           <p class="eyebrow">Steckersolargeräte in Deutschland</p>
           <h1>800 Watt ist nicht 2000 Watt Peak</h1>
           <p class="lede">Viele Balkonkraftwerke werden mit beiden Zahlen beworben. 800&nbsp;W (im Gesetz: 800&nbsp;VA) begrenzen den Wechselrichter. 2000&nbsp;Wp begrenzen die Module. Beide Werte stehen in EEG §&nbsp;8 Abs.&nbsp;5a, messen aber unterschiedliche Dinge. Wer sie vertauscht, fällt aus den vereinfachten Regeln oder erwartet 2000&nbsp;Watt in der Steckdose.</p>
@@ -138,7 +138,23 @@
       <div class="band-inner">
         <h2>Was 800 VA und 2000 Wp begrenzen</h2>
         <figure class="frame">
-          <img src="img/fluss.svg" width="960" height="280" alt="Kette: Module bis 2000 Wp, Wechselrichter höchstens 800 VA, dann die Steckdose im Hausnetz">
+          <ol class="flow">
+            <li>
+              <span class="flow-label">Module</span>
+              <strong>bis 2000 Wp</strong>
+              <span class="flow-meta">Gleichstrom · Laborwert</span>
+            </li>
+            <li>
+              <span class="flow-label">Wechselrichter</span>
+              <strong>max. 800 VA</strong>
+              <span class="flow-meta">Wechselstrom ins Haus</span>
+            </li>
+            <li>
+              <span class="flow-label">Steckdose</span>
+              <strong>Hausnetz</strong>
+              <span class="flow-meta">nicht 2000 W in der Dose</span>
+            </li>
+          </ol>
           <figcaption>Mehr Modulleistung als 800&nbsp;W ist erlaubt. In der Steckdose kommen trotzdem höchstens 800&nbsp;VA an, weil der Wechselrichter abregelt. So steht es in EEG §&nbsp;8 Abs.&nbsp;5a.</figcaption>
         </figure>
         <div class="bento">
@@ -186,7 +202,7 @@
       <div class="footer-brand">
         <a class="wordmark" href="index.html">steckercheck<span>.de</span></a>
         <p>Informationen zu Steckersolargeräten in Deutschland.</p>
-        <span class="publisher">AC Beauty to Customer UG (haftungsbeschränkt)</span>
+        <span class="publisher">AC Beauty to Customer UG (haftungsbeschränkt), Berlin</span>
       </div>
       <nav class="footer-nav" aria-label="Fußzeile">
         <a href="index.html">Start</a>
