@@ -309,6 +309,89 @@
         <li>Mit Vermieter oder Hausverwaltung klären, bevor montiert wird.</li>
         <li>Nach der Inbetriebnahme im MaStR registrieren. Den Netzbetreiber extra anzuschreiben müssen Sie in den Leistungsgrenzen bei unentgeltlicher Abnahme nicht.</li>
       </ol>
+      <p>Die Werte können Sie <a href="#grenzen-pruefen">an den EEG-Grenzen prüfen</a>.</p>
+
+      <section class="limit-check" id="grenzen-pruefen">
+        <h2>Liegt Ihr Steckersolargerät in den EEG-Grenzen?</h2>
+        <p class="lede">800&nbsp;VA begrenzen den Wechselrichter. 2000&nbsp;Wp begrenzen die Module. Beide Zahlen stehen in EEG §&nbsp;8 Abs.&nbsp;5a.</p>
+
+        <form id="limit-form" novalidate>
+          <label for="wr">Wechselrichter, höchste wählbare Leistung in VA</label>
+          <p class="hint">Es zählt die höchste Stufe, die sich einstellen lässt. Eine Drossel in der App ändert die Grenze nicht.</p>
+          <input id="wr" name="wr" type="number" inputmode="decimal" min="0" step="any" required>
+
+          <label for="wp">Summe der Module in Wp</label>
+          <p class="hint">Alle Module hinter demselben Gerät addieren.</p>
+          <input id="wp" name="wp" type="number" inputmode="decimal" min="0" step="any" required>
+
+          <label for="more">Weitere Steckersolargeräte hinter demselben Zähler, VA</label>
+          <p class="hint">Leer lassen, wenn Sie nur ein Gerät haben. Mehrere Geräte werden addiert.</p>
+          <input id="more" name="more" type="number" inputmode="decimal" min="0" step="any" value="0">
+
+          <button type="submit">Grenzen prüfen</button>
+        </form>
+
+        <div class="result" id="out" hidden></div>
+
+        <p class="sources">EEG §&nbsp;8 Abs.&nbsp;5a · <a href="https://www.gesetze-im-internet.de/eeg_2014/__8.html">gesetze-im-internet.de</a> · FAQ der Bundesnetzagentur, <a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/Solaranlagen/Balkon_table.html">Balkon-Solaranlagen</a></p>
+      </section>
+
+      <script>
+        (function () {
+          var form = document.getElementById("limit-form");
+          var out = document.getElementById("out");
+          var LIMIT_VA = 800;
+          var LIMIT_WP = 2000;
+
+          function num(el) {
+            var raw = String(el.value).trim().replace(",", ".");
+            if (raw === "") return null;
+            var n = Number(raw);
+            return Number.isFinite(n) && n >= 0 ? n : NaN;
+          }
+
+          function fmt(n) {
+            return String(n).replace(".", ",");
+          }
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var wr = num(document.getElementById("wr"));
+            var wp = num(document.getElementById("wp"));
+            var moreRaw = String(document.getElementById("more").value).trim();
+            var more = moreRaw === "" ? 0 : num(document.getElementById("more"));
+
+            if (wr === null || wp === null || Number.isNaN(wr) || Number.isNaN(wp) || Number.isNaN(more)) {
+              out.hidden = false;
+              out.dataset.state = "";
+              out.innerHTML = "<p>Tragen Sie die Wechselrichterleistung in VA und die Modulsumme in Wp ein.</p>";
+              return;
+            }
+
+            var combined = wr + more;
+            var vaOk = combined <= LIMIT_VA;
+            var wpOk = wp <= LIMIT_WP;
+            var bits = [];
+
+            if (vaOk && wpOk) {
+              bits.push("<p>In diesen Grenzen. Wechselrichter zusammen " + fmt(combined) + "&nbsp;VA, Module " + fmt(wp) + "&nbsp;Wp.</p>");
+              out.dataset.state = "ok";
+            } else {
+              if (!vaOk) {
+                bits.push("<p>Die Wechselrichterleistung liegt zusammen bei " + fmt(combined) + "&nbsp;VA. Die Grenze in EEG §&nbsp;8 Abs.&nbsp;5a ist 800&nbsp;VA.</p>");
+              }
+              if (!wpOk) {
+                bits.push("<p>Die Modulsumme liegt bei " + fmt(wp) + "&nbsp;Wp. Die Grenze in EEG §&nbsp;8 Abs.&nbsp;5a ist 2000&nbsp;Wp.</p>");
+              }
+              out.dataset.state = "over";
+            }
+
+            bits.push("<p>Die Registrierung im Marktstammdatenregister bleibt Pflicht.</p>");
+            out.innerHTML = bits.join("");
+            out.hidden = false;
+          });
+        })();
+      </script>
 
       <section class="faq" id="faq">
         <h2>Häufige Fragen</h2>
