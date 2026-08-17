@@ -658,6 +658,116 @@ main {
   margin-right: 0.45em;
 }
 
+/* In-article EEG limit checker */
+.limit-check {
+  --ok-bg: #e7f3ea;
+  --warn-bg: #f6ebe4;
+  margin: 2rem 0 0;
+  padding: 1.15rem 1.15rem 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  scroll-margin-top: calc(var(--header-h) + 0.8rem);
+}
+
+.limit-check h2 {
+  margin-top: 0;
+  max-width: none;
+}
+
+.limit-check .lede {
+  margin: 0 0 1.5rem;
+  color: var(--ink);
+  max-width: none;
+}
+
+.limit-check label {
+  display: block;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.limit-check .hint {
+  color: var(--mist);
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+  max-width: none;
+}
+
+.limit-check input[type="number"] {
+  width: 100%;
+  min-height: var(--touch);
+  padding: 0.55rem 0.75rem;
+  margin: 0 0 1.1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  background: var(--card);
+  color: var(--ink);
+}
+
+.limit-check button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch);
+  padding: 0.6rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--lime-ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.limit-check button:hover {
+  filter: brightness(1.05);
+}
+
+.limit-check .result {
+  margin-top: 1.4rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.limit-check .result[data-state="ok"] {
+  background: var(--ok-bg);
+}
+
+.limit-check .result[data-state="over"] {
+  background: var(--warn-bg);
+}
+
+.limit-check .result[hidden] {
+  display: none;
+}
+
+.limit-check .result p {
+  margin: 0 0 0.65rem;
+  max-width: none;
+}
+
+.limit-check .result p:last-child {
+  margin: 0;
+}
+
+.limit-check > .sources {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  color: var(--mist);
+  font-size: 0.9rem;
+  max-width: none;
+}
+
+.limit-check > .sources a {
+  color: var(--forest);
+}
+
 .frame {
   margin: 0.7rem 0 1.35rem;
   max-width: none;
