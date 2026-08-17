@@ -1429,9 +1429,9 @@ address {
   }
 
   .stage h1 {
-    max-width: 14ch;
+    max-width: none;
     font-size: clamp(2.2rem, 4.4vw, 4.1rem);
-    line-height: 1.05;
+    line-height: 1.12;
   }
 
   .page-hero h1 {
