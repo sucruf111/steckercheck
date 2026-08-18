@@ -2,7 +2,9 @@
 
 Static site for https://steckercheck.de/ — Steckersolar 800 VA / 2000 Wp, sourced from EEG, BNetzA, MaStR.
 
-No analytics, no Awin JS, no Google Fonts CDN. IBM Plex Sans and Source Serif 4 are self-hosted (SIL OFL) in `/fonts`. Illustrations are hand-built SVGs in `/img` (only `og.jpg` and `apple-touch-icon.png` are raster). Partner links are plain `<a href>` to the Awin deep link, never a script, and every one of them sits in a block labelled **Werbung**. They currently run on `index.html`, `800-watt-2000-wp.html` and `balkonkraftwerk-kaufen.html`.
+No analytics, no Awin JS, no Google Fonts CDN. IBM Plex Sans is self-hosted (SIL OFL) and is the only delivered webfont; the older Source Serif file remains in `/fonts` but is no longer referenced. Illustrations are hand-built SVGs in `/img` (only `og.jpg` and `apple-touch-icon.png` are raster). Partner links are plain `<a href>` elements with `rel="sponsored nofollow"`, never a script. Every link is immediately labelled **Werbung · Affiliate-Link** and carries a short commission note. They currently run on `index.html` and `balkonkraftwerk-kaufen.html`.
+
+The four public pages inline the complete screen CSS to remove the render-blocking stylesheet request on the first view. `site.css` is the readable source and is loaded directly by the legal pages and `404.html`; when the design system changes, keep the four inline copies in sync. `print.css` remains a non-blocking print-only stylesheet.
 
 Public pages: `index.html`, `800-watt-2000-wp.html`, `schuko-oder-wieland.html`, `balkonkraftwerk-kaufen.html`. Legal: `impressum.html`, `datenschutz.html` (noindex). Crawlers: `robots.txt`, `sitemap.xml`. Agents: `llms.txt`, `llms-full.txt`, `openapi.json`. Cloudflare: `_headers`, `_redirects`, `404.html`.
 
