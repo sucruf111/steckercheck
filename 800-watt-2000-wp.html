@@ -40,11 +40,14 @@
   "@graph": [
     {
       "@type": "Article",
+      "@id": "https://steckercheck.de/800-watt-2000-wp#article",
       "headline": "800 VA oder 2000 Wp: die zwei EEG-Grenzen",
       "datePublished": "2026-08-15",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-08-18",
       "inLanguage": "de-DE",
-      "mainEntityOfPage": "https://steckercheck.de/800-watt-2000-wp",
+      "mainEntityOfPage": {
+        "@id": "https://steckercheck.de/800-watt-2000-wp#webpage"
+      },
       "url": "https://steckercheck.de/800-watt-2000-wp",
       "description": "Balkonkraftwerk 800 VA oder 2000 Wp: der Wechselrichter höchstens 800 VA, die Module höchstens 2000 Wp. EEG § 8 Abs. 5a, seit dem Solarpaket I vom 16. Mai 2024.",
       "author": {
@@ -59,11 +62,23 @@
       "@type": "Organization",
       "@id": "https://steckercheck.de/#organization",
       "name": "AC Beauty to Customer UG (haftungsbeschränkt)",
+      "legalName": "AC Beauty to Customer UG (haftungsbeschränkt)",
       "alternateName": ["steckercheck.de", "steckercheck"],
       "url": "https://steckercheck.de",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://steckercheck.de/apple-touch-icon.png"
+        "url": "https://steckercheck.de/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
+      "email": "contact@beauty2customer.com",
+      "telephone": "+49-176-45760626",
+      "vatID": "DE316150851",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "HRB",
+        "name": "Handelsregister Amtsgericht Charlottenburg",
+        "value": "HRB 193296 B"
       },
       "address": {
         "@type": "PostalAddress",
@@ -71,10 +86,57 @@
         "postalCode": "10587",
         "addressLocality": "Berlin",
         "addressCountry": "DE"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Deutschland"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://steckercheck.de/#website",
+      "name": "steckercheck.de",
+      "url": "https://steckercheck.de",
+      "inLanguage": "de-DE",
+      "description": "Steckersolar in Deutschland: 800 VA am Wechselrichter, 2000 Wp an den Modulen, Registrierung im MaStR.",
+      "publisher": {
+        "@id": "https://steckercheck.de/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://steckercheck.de/800-watt-2000-wp#webpage",
+      "url": "https://steckercheck.de/800-watt-2000-wp",
+      "name": "800 VA oder 2000 Wp: die zwei EEG-Grenzen",
+      "description": "Balkonkraftwerk 800 VA oder 2000 Wp: der Wechselrichter höchstens 800 VA, die Module höchstens 2000 Wp. EEG § 8 Abs. 5a, seit dem Solarpaket I vom 16. Mai 2024.",
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://steckercheck.de/#website"
+      },
+      "about": [
+        "Steckersolargerät",
+        "Balkonkraftwerk",
+        "800 VA",
+        "2000 Wp",
+        "EEG § 8 Abs. 5a"
+      ],
+      "datePublished": "2026-08-15",
+      "dateModified": "2026-08-18",
+      "breadcrumb": {
+        "@id": "https://steckercheck.de/800-watt-2000-wp#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://steckercheck.de/og.jpg"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".page-hero h1", ".page-hero .lede"]
       }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://steckercheck.de/800-watt-2000-wp#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
