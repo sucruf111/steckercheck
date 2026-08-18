@@ -637,12 +637,18 @@ main {
 }
 
 .ad-banner {
-  background: rgba(215, 255, 94, 0.1);
-  border: 1px solid rgba(215, 255, 94, 0.28);
-  color: #f4f7f0;
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
   border-radius: var(--radius-sm);
-  padding: 0.9rem 1rem;
+  padding: 0.9rem 1.05rem;
   font-size: 0.92rem;
+}
+
+.band .ad-banner,
+.prose .ad-banner,
+.dossier .ad-banner {
+  margin: 1.35rem 0 0;
 }
 
 .ad-banner p {
@@ -650,12 +656,47 @@ main {
   max-width: none;
 }
 
-.ad-banner strong {
+.ad-banner p + p {
+  margin-top: 0.55rem;
+}
+
+.stage .ad-banner,
+.page-hero .ad-banner {
+  background: rgba(215, 255, 94, 0.1);
+  border: 1px solid rgba(215, 255, 94, 0.28);
+  color: #f4f7f0;
+  margin: 1.15rem 0 0;
+}
+
+.stage .ad-banner strong,
+.page-hero .ad-banner strong {
   color: var(--lime);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.72rem;
   margin-right: 0.45em;
+}
+
+.stage .ad-banner a,
+.page-hero .ad-banner a {
+  color: var(--lime);
+  font-weight: 650;
+}
+
+.stage .ad-banner a:hover,
+.page-hero .ad-banner a:hover {
+  color: #fff;
+}
+
+.prose .ad-banner p,
+.dossier .ad-banner p {
+  margin: 0;
+  max-width: none;
+}
+
+.prose .ad-banner p + p,
+.dossier .ad-banner p + p {
+  margin-top: 0.55rem;
 }
 
 /* In-article EEG limit checker */
