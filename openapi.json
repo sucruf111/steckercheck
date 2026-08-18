@@ -40,8 +40,8 @@
       "get": {
         "tags": ["Seiten"],
         "operationId": "getStart",
-        "summary": "800 W oder 2000 Wp beim Balkonkraftwerk",
-        "description": "Startseite. Stellt die beiden Grenzen gegenüber: 800 VA begrenzen den Wechselrichter, 2000 Wp die Module. Verweist auf die ausführliche Erklärung, die Steckerfrage und die Kauf-Checkliste.",
+        "summary": "Balkonkraftwerk 2026: Regeln, Anschluss und Kaufcheck",
+        "description": "Orientierungshub für Auswahl, Anschluss, Anmeldung und Kauf eines Steckersolargeräts. Verweist auf die Fachartikel zu den EEG-Grenzen, zur Steckerfrage und auf den 6-Punkte-Kaufcheck.",
         "responses": {
           "200": {
             "description": "HTML-Seite auf Deutsch",
@@ -83,7 +83,7 @@
         "tags": ["Seiten"],
         "operationId": "getStecker",
         "summary": "Schuko oder Wieland beim Balkonkraftwerk",
-        "description": "Die Steckerfrage als Normfrage: DIN VDE V 0126-95, Schuko bis 960 Wp Modulleistung nach Verbraucherzentrale (Stand 6. März 2026), darüber ein Einspeisestecker. Das EEG setzt keine eigene Steckergrenze.",
+        "description": "Die Steckerfrage als Normfrage: DIN VDE V 0126-95, Schuko bis 960 W Modulleistung nach Verbraucherzentrale (Stand 6. März 2026), darüber ein Einspeisestecker. Das EEG setzt keine eigene Steckergrenze.",
         "responses": {
           "200": {
             "description": "HTML-Seite auf Deutsch",
@@ -103,7 +103,7 @@
       "get": {
         "tags": ["Seiten"],
         "operationId": "getKaufen",
-        "summary": "Balkonkraftwerk kaufen: Checkliste für 800 VA und 2000 Wp",
+        "summary": "Balkonkraftwerk kaufen: 6-Punkte-Check",
         "description": "Sechs Punkte am Datenblatt vor der Bestellung: höchste einstellbare Wechselrichterleistung, Summe der Module, Steckertyp, Zähler, Miete, Registrierung. Enthält gekennzeichnete Partnerlinks und keine Produktrangliste.",
         "responses": {
           "200": {
@@ -125,7 +125,7 @@
         "tags": ["Rechtliches"],
         "operationId": "getImpressum",
         "summary": "Impressum",
-        "description": "Pflichtangaben nach § 5 TMG: Anschrift, Vertretung, Kontakt, Registereintrag, Hinweis zur Werbekennzeichnung.",
+        "description": "Pflichtangaben nach § 5 DDG: Anschrift, Vertretung, Kontakt, Registereintrag sowie redaktionelle Arbeitsweise und Werbekennzeichnung.",
         "responses": {
           "200": {
             "description": "HTML-Seite auf Deutsch, noindex",

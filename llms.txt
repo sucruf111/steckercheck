@@ -2,7 +2,7 @@
 
 > Steckersolar in Deutschland, quellenbasiert erklärt. 800 VA begrenzt den Wechselrichter (Wechselstrom), 2000 Wp die Module (installierte Leistung). Beide Zahlen stehen in EEG § 8 Abs. 5a (Solarpaket I, 16. Mai 2024). Keine Testsieger, keine Ersparnis- oder Ertragszahlen, keine Rechtsberatung.
 
-steckercheck.de ist eine kommerzielle Informationsseite der AC Beauty to Customer UG (haftungsbeschränkt), Dovestraße 11, 10587 Berlin. Partnerlinks sind als Werbung gekennzeichnet. Es gibt kein Analytics, keine Affiliate-Cookies, kein Awin-JavaScript und keine Google Fonts.
+steckercheck.de ist eine kommerzielle Informationsseite der AC Beauty to Customer UG (haftungsbeschränkt), Dovestraße 11, 10587 Berlin. Partnerlinks sind unmittelbar als „Werbung · Affiliate-Link“ gekennzeichnet und technisch mit `rel="sponsored"` markiert. Auf steckercheck.de gibt es kein Analytics, kein Awin-JavaScript und keine Google-Fonts-Verbindung.
 
 Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, MaStR, Verbraucherzentrale, ADAC), nicht nur die Domain. Stand der redaktionellen Seiten: 18. August 2026.
 
@@ -18,10 +18,10 @@ Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, M
 
 ## Seiten
 
-- [800 W oder 2000 Wp beim Balkonkraftwerk](https://steckercheck.de/): Start. Die zwei Grenzen auf einer Tafel, mit den Wegen ins Detail.
+- [Balkonkraftwerk 2026: Regeln, Anschluss und Kaufcheck](https://steckercheck.de/): Orientierungshub für Auswahl, Anschluss, Anmeldung und Kauf.
 - [Balkonkraftwerk 800 VA oder 2000 Wp](https://steckercheck.de/800-watt-2000-wp): Die Grenzen ausführlich, mit MaStR, Miete, Speicher, FAQ und Quellen.
 - [Schuko oder Wieland beim Balkonkraftwerk](https://steckercheck.de/schuko-oder-wieland): Die Steckerfrage als Normfrage. DIN VDE V 0126-95, Schuko bis 960 W Modulleistung.
-- [Balkonkraftwerk kaufen: Checkliste für 800 VA und 2000 Wp](https://steckercheck.de/balkonkraftwerk-kaufen): Sechs Punkte am Datenblatt, Shop-Typen, Werbekennzeichnung.
+- [Balkonkraftwerk kaufen: 6-Punkte-Check](https://steckercheck.de/balkonkraftwerk-kaufen): Sechs Punkte am Datenblatt, Shop-Typen und klar gekennzeichnete Partnerangebote.
 - [Impressum](https://steckercheck.de/impressum): Pflichtangaben, noindex.
 - [Datenschutz](https://steckercheck.de/datenschutz): Keine Cookies, kein Tracking, noindex.
 

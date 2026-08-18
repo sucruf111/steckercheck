@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://steckercheck.de/og.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <meta name="theme-color" content="#06110c">
+  <meta name="theme-color" content="#071711">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="author" content="AC Beauty to Customer UG (haftungsbeschränkt)">
   <meta name="geo.region" content="DE">
@@ -31,8 +31,863 @@
   <link rel="alternate" hreflang="de-DE" href="https://steckercheck.de/800-watt-2000-wp">
   <link rel="alternate" hreflang="x-default" href="https://steckercheck.de/800-watt-2000-wp">
   <link rel="preload" href="fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/source-serif.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+/* steckercheck.de — editorial solar workbench */
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("fonts/ibm-plex-sans.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --void: #071711;
+  --void-2: #0c251a;
+  --paper: #f4f6ef;
+  --paper-2: #e9eee5;
+  --card: #fff;
+  --ink: #122019;
+  --mist: #607068;
+  --line: rgba(18, 32, 25, .11);
+  --line-strong: rgba(18, 32, 25, .2);
+  --lime: #dfff68;
+  --lime-ink: #15210c;
+  --mint: #75e1b8;
+  --forest: #126847;
+  --forest-dark: #0b4b34;
+  --radius: 1.35rem;
+  --radius-sm: .85rem;
+  --max: 74rem;
+  --read: 46rem;
+  --gutter: clamp(1rem, 4.6vw, 1.75rem);
+  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --header-h: 4rem;
+  --touch: 44px;
+  --shadow: 0 20px 60px rgba(7, 23, 17, .09);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(18, 32, 25, .024) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 32, 25, .024) 1px, transparent 1px),
+    var(--paper);
+  background-size: 32px 32px;
+  font-family: var(--sans);
+  font-weight: 430;
+  line-height: 1.65;
+  overflow-x: clip;
+}
+main { flex: 1; }
+img, svg { max-width: 100%; height: auto; }
+h1, h2, h3, p { text-wrap: pretty; }
+h1, h2, h3 { overflow-wrap: break-word; }
+::selection { color: var(--lime-ink); background: var(--lime); }
+a { color: var(--forest); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+a:hover { color: var(--forest-dark); }
+:focus-visible { outline: 3px solid #bde93e; outline-offset: 3px; }
+
+.skip {
+  position: fixed;
+  top: .65rem;
+  left: var(--gutter);
+  z-index: 100;
+  min-height: var(--touch);
+  display: inline-flex;
+  align-items: center;
+  padding: .55rem .9rem;
+  color: var(--lime-ink);
+  background: var(--lime);
+  border-radius: 999px;
+  font-weight: 750;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 160ms ease;
+}
+.skip:focus { transform: translateY(0); }
+.wrap { width: min(var(--max), calc(100% - 2 * var(--gutter))); margin-inline: auto; }
+.wrap.narrow { width: min(var(--read), calc(100% - 2 * var(--gutter))); }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  min-height: var(--header-h);
+  padding-top: env(safe-area-inset-top, 0);
+  color: #f5faf5;
+  background: rgba(7, 23, 17, .97);
+  border-bottom: 1px solid rgba(223, 255, 104, .12);
+}
+.site-header-inner {
+  width: min(var(--max), calc(100% - 2 * var(--gutter)));
+  min-height: var(--header-h);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.wordmark {
+  min-height: var(--touch);
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  color: #f7fbf7;
+  font-size: 1.02rem;
+  font-weight: 760;
+  letter-spacing: -.04em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.wordmark:hover { color: #fff; }
+.wordmark span { color: var(--lime); font-weight: 560; }
+.brand-mark {
+  width: 1.7rem;
+  height: 1.7rem;
+  flex: 0 0 auto;
+  border-radius: .5rem;
+  box-shadow: 0 0 0 1px rgba(223, 255, 104, .18), 0 0 24px rgba(223, 255, 104, .13);
+}
+.nav { display: flex; align-items: center; gap: .12rem; }
+.nav a {
+  min-height: var(--touch);
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem .72rem;
+  color: rgba(245, 250, 245, .72);
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 610;
+  text-decoration: none;
+  transition: color 150ms ease, background 150ms ease;
+}
+.nav a:hover, .nav a[aria-current="page"] { color: #fff; background: rgba(255, 255, 255, .075); }
+.nav .nav-cta {
+  margin-left: .3rem;
+  padding-inline: 1rem;
+  color: var(--lime-ink);
+  background: var(--lime);
+  font-weight: 760;
+}
+.nav .nav-cta:hover { color: var(--lime-ink); background: #e7ff8b; }
+.menu { position: static; display: none; flex: 0 0 auto; }
+.menu summary {
+  min-width: var(--touch);
+  min-height: var(--touch);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .9rem;
+  color: #f6faf6;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .9rem;
+  font-weight: 700;
+  list-style: none;
+}
+.menu summary::-webkit-details-marker { display: none; }
+
+/* Controls */
+.actions, .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+.actions { margin-top: 1.35rem; }
+.btn, .btn-primary, .btn-ghost, .partner-link, button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .72rem 1.12rem;
+  border: 0;
+  border-radius: .8rem;
+  font: inherit;
+  font-size: .93rem;
+  font-weight: 750;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 150ms ease, background 150ms ease;
+}
+.btn, .btn-primary, button { color: var(--lime-ink); background: var(--lime); }
+.btn:hover, .btn-primary:hover, button:hover { color: var(--lime-ink); background: #e8ff91; transform: translateY(-1px); }
+.btn-ghost { color: #f5faf5; background: rgba(255, 255, 255, .055); border: 1px solid rgba(255, 255, 255, .16); }
+.btn-ghost:hover { color: #fff; background: rgba(255, 255, 255, .1); }
+
+/* Hero */
+.stage, .page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f5faf5;
+  background:
+    radial-gradient(60rem 34rem at 85% -10%, rgba(117, 225, 184, .14), transparent 58%),
+    radial-gradient(46rem 30rem at -10% 105%, rgba(223, 255, 104, .13), transparent 54%),
+    var(--void);
+  border-bottom: 1px solid rgba(223, 255, 104, .1);
+}
+.stage { padding: clamp(2.1rem, 5vw, 4.8rem) 0 clamp(2.2rem, 5vw, 4.4rem); }
+.page-hero { padding: clamp(2rem, 4vw, 3.6rem) 0 clamp(2rem, 4vw, 3.2rem); }
+.page-hero.compact { padding-block: clamp(2rem, 4vw, 3rem); }
+.stage::before, .page-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: .72;
+  background-image:
+    linear-gradient(rgba(223, 255, 104, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223, 255, 104, .045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(48rem 34rem at 76% 24%, #000, transparent 74%);
+  mask-image: radial-gradient(48rem 34rem at 76% 24%, #000, transparent 74%);
+}
+.stage::after, .page-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 22rem;
+  aspect-ratio: 1;
+  top: -13rem;
+  right: -8rem;
+  border: 1px solid rgba(223, 255, 104, .16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3rem rgba(223, 255, 104, .025), 0 0 0 7rem rgba(117, 225, 184, .018);
+}
+.stage-inner, .page-hero-inner {
+  position: relative;
+  width: min(var(--max), calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}
+.stage-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(19rem, .98fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+.stage-copy { max-width: 41rem; }
+.eyebrow {
+  margin: 0 0 .85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  color: var(--lime);
+  font-size: .72rem;
+  font-weight: 780;
+  letter-spacing: .14em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.eyebrow::before { content: ""; width: 1.5rem; height: 2px; background: currentColor; }
+.stage h1, .page-hero h1 {
+  margin: 0 0 1rem;
+  max-width: 18ch;
+  color: #f9fcf9;
+  font-family: var(--display);
+  font-size: clamp(2.25rem, 6vw, 5.15rem);
+  font-weight: 720;
+  letter-spacing: -.055em;
+  line-height: .98;
+  hyphens: manual;
+}
+.page-hero h1 { max-width: 21ch; font-size: clamp(2.2rem, 5vw, 4.3rem); }
+.stage h1 { overflow-wrap: normal; word-break: normal; hyphens: none; }
+@media (min-width: 901px) {
+  .stage h1 { font-size: clamp(3.5rem, 5.25vw, 4.35rem); }
+}
+.stage .lede, .page-hero .lede {
+  max-width: 46rem;
+  margin: 0;
+  color: rgba(239, 247, 241, .76);
+  font-size: clamp(1.04rem, 2.1vw, 1.2rem);
+  line-height: 1.58;
+}
+.page-hero .lede { margin-bottom: 1rem; }
+.chips { margin: 1.15rem 0 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.chip {
+  padding: .38rem .68rem;
+  color: rgba(244, 250, 245, .76);
+  background: rgba(255, 255, 255, .045);
+  border: 1px solid rgba(255, 255, 255, .11);
+  border-radius: 999px;
+  font-size: .73rem;
+  font-weight: 590;
+  line-height: 1.3;
+}
+.breadcrumbs {
+  margin: 0 0 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .42rem;
+  color: rgba(244, 250, 245, .48);
+  font-size: .78rem;
+}
+.breadcrumbs a { color: rgba(244, 250, 245, .72); }
+.article-meta, .proof-row {
+  margin-top: 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.1rem;
+  color: rgba(244, 250, 245, .62);
+  font-size: .78rem;
+}
+.article-meta a, .proof-row a { color: inherit; }
+.article-meta span, .proof-row span { display: inline-flex; align-items: center; gap: .35rem; }
+.article-meta span::before, .proof-row span::before {
+  content: "";
+  width: .42rem;
+  height: .42rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 0 4px rgba(117, 225, 184, .08);
+}
+.hero-fig {
+  position: relative;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .65rem;
+  overflow: hidden;
+  background: rgba(12, 37, 26, .78);
+  border: 1px solid rgba(223, 255, 104, .2);
+  border-radius: 1.35rem;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, .28);
+}
+.hero-fig::before {
+  content: "Systemübersicht";
+  position: absolute;
+  z-index: 2;
+  top: .7rem;
+  left: .75rem;
+  padding: .28rem .55rem;
+  color: rgba(245, 250, 245, .72);
+  background: rgba(7, 23, 17, .8);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 999px;
+  font-size: .65rem;
+  font-weight: 680;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.hero-fig img {
+  width: 100%;
+  display: block;
+  grid-column: 1 / -1;
+  aspect-ratio: 1400 / 933;
+  object-fit: cover;
+  object-position: center 62%;
+  background: #0b2017;
+}
+.num-card {
+  margin: 0 0 .65rem .65rem;
+  padding: .9rem 1rem;
+  background: rgba(7, 23, 17, .74);
+  border: 1px solid rgba(223, 255, 104, .17);
+  border-radius: .85rem;
+}
+.num-card.two { margin-left: 0; }
+.num-card strong {
+  display: block;
+  color: var(--lime);
+  font-size: clamp(1.75rem, 4.2vw, 2.7rem);
+  font-weight: 720;
+  letter-spacing: -.06em;
+  line-height: .95;
+}
+.num-card span {
+  display: block;
+  margin-top: .3rem;
+  color: rgba(239, 247, 241, .66);
+  font-size: .7rem;
+  font-weight: 560;
+  line-height: 1.3;
+}
+
+/* Partner modules */
+.ad-banner {
+  margin: 1.35rem 0 0;
+  padding: .95rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  color: var(--ink);
+  background: #f7f8f2;
+  border: 1px solid rgba(18, 104, 71, .2);
+  border-radius: 1rem;
+  box-shadow: inset 3px 0 0 var(--lime);
+  font-size: .86rem;
+  line-height: 1.45;
+}
+.stage .ad-banner, .page-hero .ad-banner {
+  color: #f4faf5;
+  background: rgba(255, 255, 255, .055);
+  border-color: rgba(223, 255, 104, .22);
+}
+.ad-banner p { margin: 0; max-width: none; }
+.ad-banner p + p { margin-top: .24rem; }
+.ad-label, .disclosure-kicker {
+  color: var(--forest);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.ad-banner strong { color: inherit; font-size: .98rem; letter-spacing: -.01em; text-transform: none; }
+.stage .ad-label, .page-hero .ad-label { color: var(--lime); }
+.affiliate-note { margin-top: .4rem !important; color: var(--mist); font-size: .67rem; line-height: 1.35; }
+.stage .affiliate-note, .page-hero .affiliate-note { color: rgba(244, 250, 245, .56); }
+.partner-link {
+  min-height: 44px;
+  padding-inline: .9rem;
+  color: var(--lime-ink) !important;
+  background: var(--lime);
+  white-space: nowrap;
+}
+.partner-link:hover { background: #eaff99; transform: translateY(-1px); }
+
+/* Homepage */
+.band { padding: clamp(3rem, 7vw, 6.5rem) 0; }
+.band-inner { width: min(var(--max), calc(100% - 2 * var(--gutter))); margin-inline: auto; }
+.band-inner > h2, .section-heading {
+  margin: 0 0 1.35rem;
+  max-width: 18ch;
+  font-size: clamp(1.75rem, 4vw, 3.15rem);
+  font-weight: 690;
+  letter-spacing: -.045em;
+  line-height: 1.05;
+}
+.frame {
+  margin: 1.4rem 0;
+  padding: .8rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(7, 23, 17, .045);
+}
+.frame > img { width: 100%; display: block; border-radius: calc(var(--radius) - .5rem); }
+.frame figcaption { padding: .7rem .4rem .15rem; color: var(--mist); font-size: .78rem; line-height: 1.5; }
+.flow {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  color: #f4faf5;
+  background: var(--void);
+  border-radius: calc(var(--radius) - .5rem);
+  list-style: none;
+}
+.flow li {
+  position: relative;
+  min-height: 10rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 1px solid rgba(255, 255, 255, .09);
+}
+.flow li:last-child { border-right: 0; }
+.flow li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  right: -.68rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  color: var(--lime-ink);
+  background: var(--lime);
+  border-radius: 50%;
+  font-size: .78rem;
+  font-weight: 800;
+}
+.flow-label { color: var(--mint); font-size: .68rem; font-weight: 780; letter-spacing: .1em; text-transform: uppercase; }
+.flow strong { margin-top: .25rem; color: #fff; font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 690; letter-spacing: -.045em; line-height: 1; }
+.flow-meta { margin-top: .45rem; color: rgba(244, 250, 245, .58); font-size: .72rem; line-height: 1.35; }
+.bento { margin-top: 1.6rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+.tile {
+  min-height: 13rem;
+  padding: 1.3rem;
+  background: rgba(255, 255, 255, .76);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.tile.wide {
+  grid-row: span 2;
+  color: #f3f9f4;
+  background: radial-gradient(25rem 18rem at 90% 0, rgba(223, 255, 104, .14), transparent 56%), var(--void-2);
+  border-color: rgba(223, 255, 104, .13);
+}
+.tile h3 { margin: 0 0 .65rem; font-size: 1.05rem; line-height: 1.25; }
+.tile.wide h3 { color: var(--lime); font-size: clamp(1.45rem, 3vw, 2.2rem); letter-spacing: -.04em; }
+.tile p { margin: 0; color: var(--mist); font-size: .9rem; }
+.tile.wide p { color: rgba(242, 249, 243, .72); }
+.paths { margin-top: clamp(2.3rem, 6vw, 4.5rem); display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem; }
+.path-card {
+  min-height: 13rem;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  box-shadow: 0 14px 40px rgba(7, 23, 17, .05);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.path-card:hover { color: var(--ink); border-color: rgba(18, 104, 71, .3); box-shadow: var(--shadow); transform: translateY(-3px); }
+.path-card h2 { margin: 0 0 .55rem; max-width: 15ch; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.035em; line-height: 1.1; }
+.path-card p { margin: 0; max-width: 31rem; color: var(--mist); font-size: .9rem; }
+.path-go { margin-top: 1.2rem; display: inline-flex; align-items: center; gap: .45rem; color: var(--forest); font-size: .85rem; font-weight: 740; }
+.path-go::after { content: "→"; }
+.statline {
+  margin: 1.6rem 0 0;
+  padding: 1.1rem 1.2rem;
+  color: var(--mist);
+  background: rgba(255, 255, 255, .56);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  font-size: .82rem;
+}
+
+/* Editorial body */
+.page, .prose, .dossier { margin-block: clamp(2.4rem, 6vw, 5.2rem); }
+.prose, .dossier { color: #26342d; font-size: clamp(1rem, 1.2vw, 1.06rem); }
+.prose > *, .dossier > * { max-width: var(--read); margin-inline: auto; }
+.prose > .frame, .prose > .table-wrap, .prose > .split-limits, .prose > .split-plug,
+.prose > .limit-check, .prose > .faq, .prose > .cta-row,
+.dossier > .frame, .dossier > .table-wrap, .dossier > .split-limits, .dossier > .split-plug,
+.dossier > .anatomy, .dossier > .protocol, .dossier > .price-note, .dossier > .shop-types,
+.dossier > .faq, .dossier > .cta-row, .dossier > nav, .dossier > .ad-banner { max-width: 60rem; }
+.prose > h2, .dossier > h2, .page h2 {
+  margin-top: clamp(2.7rem, 7vw, 4.8rem);
+  margin-bottom: .75rem;
+  color: var(--ink);
+  font-size: clamp(1.65rem, 4vw, 2.55rem);
+  font-weight: 690;
+  letter-spacing: -.045em;
+  line-height: 1.08;
+}
+.prose > h3, .dossier > h3 { margin-top: 2.2rem; margin-bottom: .5rem; color: var(--ink); font-size: 1.18rem; line-height: 1.3; }
+.prose p, .dossier p, .page p { margin-top: .8rem; margin-bottom: .8rem; }
+.prose li + li, .dossier li + li { margin-top: .6rem; }
+.pull {
+  margin-block: 2rem;
+  padding: 1.35rem 1.5rem;
+  color: #eef8f0;
+  background: var(--void-2);
+  border: 0;
+  border-left: 4px solid var(--lime);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.pull p { margin: 0; color: inherit; font-size: clamp(1.15rem, 2.6vw, 1.5rem); font-weight: 620; letter-spacing: -.025em; line-height: 1.38; }
+.toc {
+  margin: 0 0 2.4rem;
+  padding: .85rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .45rem;
+  counter-reset: toc;
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  list-style: none;
+}
+.toc li { margin: 0; counter-increment: toc; }
+.toc a {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: .75rem;
+  color: var(--ink);
+  background: rgba(244, 246, 239, .75);
+  border-radius: .8rem;
+  font-size: .79rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: none;
+}
+.toc a::before { content: "0" counter(toc); margin-bottom: .25rem; color: var(--forest); font-size: .65rem; font-weight: 800; letter-spacing: .08em; }
+.toc a:hover { color: var(--forest-dark); background: #fff; }
+.table-wrap {
+  margin-block: 1.6rem;
+  overflow-x: auto;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 35px rgba(7, 23, 17, .04);
+}
+table { width: 100%; border-collapse: collapse; font-size: .86rem; line-height: 1.45; }
+th, td { padding: .9rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+th { color: var(--ink); background: var(--paper-2); font-size: .71rem; font-weight: 780; letter-spacing: .055em; text-transform: uppercase; }
+tr:last-child td { border-bottom: 0; }
+.split-limits, .split-plug, .anatomy, .shop-types {
+  margin-block: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+}
+.limit-card, .plug-card, .anatomy-card, .shop-card {
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, .78);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.limit-card:first-child { color: #f1f8f2; background: var(--void-2); border-color: rgba(223, 255, 104, .16); }
+.limit-card p, .plug-card p, .anatomy-card p, .shop-card p { margin: .45rem 0 0; color: var(--mist); font-size: .88rem; }
+.limit-card:first-child p { color: rgba(241, 248, 242, .68); }
+.limit-card .num { margin: 0; color: var(--forest); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 720; letter-spacing: -.06em; line-height: 1; }
+.limit-card:first-child .num { color: var(--lime); }
+.limit-card .sub { margin-top: .35rem; font-size: .72rem; font-weight: 720; letter-spacing: .06em; text-transform: uppercase; }
+.plug-card h3, .anatomy-card h3, .shop-card h3 { margin: .4rem 0 0; color: var(--ink); font-size: 1.08rem; line-height: 1.28; }
+.stamp {
+  width: fit-content;
+  margin: 0 !important;
+  padding: .3rem .55rem;
+  color: var(--forest) !important;
+  background: rgba(18, 104, 71, .08);
+  border-radius: 999px;
+  font-size: .65rem !important;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.protocol {
+  margin-block: 1.6rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+  counter-reset: protocol;
+  list-style: none;
+}
+.protocol > li {
+  position: relative;
+  margin: 0;
+  padding: 1.35rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .8);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  counter-increment: protocol;
+}
+.protocol > li::before { content: counter(protocol, decimal-leading-zero); display: block; margin-bottom: 1.1rem; color: var(--forest); font-size: .72rem; font-weight: 800; letter-spacing: .1em; }
+.protocol h3 { margin: 0; color: var(--ink); font-size: 1.08rem; line-height: 1.28; }
+.protocol p { margin: .55rem 0 0; color: var(--mist); font-size: .88rem; }
+.price-note {
+  margin-block: 1.5rem;
+  padding: 1.35rem;
+  color: #edf8f0;
+  background: linear-gradient(135deg, rgba(223, 255, 104, .08), transparent 50%), var(--void-2);
+  border: 1px solid rgba(223, 255, 104, .15);
+  border-radius: var(--radius);
+}
+.price-note p { color: rgba(237, 248, 240, .74); }
+.price-note p:first-child { color: var(--lime); font-weight: 700; }
+.limit-check {
+  margin-block: 2.3rem;
+  padding: clamp(1.2rem, 4vw, 2rem);
+  background: rgba(255, 255, 255, .84);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.limit-check h2 { margin: 0 0 .6rem; max-width: 22ch; color: var(--ink); font-size: clamp(1.5rem, 3.5vw, 2.3rem); letter-spacing: -.04em; line-height: 1.08; }
+.limit-check .lede { color: var(--mist); font-size: .94rem; }
+.limit-check form { margin-top: 1.4rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem .85rem; }
+.limit-check .field { display: flex; flex-direction: column; }
+.limit-check label { margin-top: .65rem; color: var(--ink); font-size: .82rem; font-weight: 700; }
+.limit-check .hint { margin: 0; color: var(--mist); font-size: .72rem; line-height: 1.4; }
+.limit-check input {
+  width: 100%;
+  min-height: 48px;
+  margin-top: .3rem;
+  padding: .7rem .8rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: .7rem;
+  font: inherit;
+}
+.limit-check button { width: fit-content; margin-top: 1rem; grid-column: 1 / -1; }
+.result { margin-top: 1rem; padding: 1rem; background: var(--paper-2); border-left: 4px solid var(--mist); border-radius: .7rem; }
+.result[data-state="ok"] { background: rgba(23, 112, 77, .08); border-color: #17704d; }
+.result[data-state="over"] { background: rgba(169, 67, 34, .08); border-color: #a94322; }
+.result p { margin: 0; }
+.result p + p { margin-top: .5rem; }
+.sources { color: var(--mist); font-size: .78rem; line-height: 1.55; }
+ol.sources { padding-left: 1.25rem; }
+.sources a { overflow-wrap: anywhere; }
+.faq { margin-block: clamp(2.6rem, 7vw, 5rem); }
+.faq > h2, section.faq > h2 { margin: 0 0 1rem; color: var(--ink); font-size: clamp(1.65rem, 4vw, 2.55rem); letter-spacing: -.045em; line-height: 1.08; }
+.faq-item { background: rgba(255, 255, 255, .72); border-top: 1px solid var(--line); }
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-item summary { min-height: 58px; padding: .95rem 2.5rem .95rem .2rem; display: flex; align-items: center; position: relative; cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; position: absolute; right: .4rem; color: var(--forest); font-size: 1.4rem; font-weight: 450; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item h3 { margin: 0; color: var(--ink); font-size: 1rem; line-height: 1.4; }
+.faq-item > p { margin: 0; padding: 0 2.5rem 1.1rem .2rem; color: var(--mist); font-size: .9rem; }
+.cta-row { margin-top: 2.4rem; }
+.prose .cta-row .btn-ghost, .dossier .cta-row .btn-ghost { color: var(--forest); background: transparent; border-color: var(--line-strong); }
+
+/* Legal */
+.page { padding-bottom: 1rem; }
+.legal-block { margin-block: 1.5rem; display: grid; gap: .7rem; }
+.legal-item {
+  padding: 1.1rem;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+.legal-item dt { color: var(--forest); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.legal-item dd { margin: 0; }
+address { font-style: normal; }
+.disclosure { margin-top: 1.5rem; padding: 1.1rem; background: rgba(223, 255, 104, .12); border: 1px solid rgba(18, 104, 71, .15); border-radius: 1rem; }
+.disclosure p { margin: 0; }
+.meta { color: var(--mist); font-size: .8rem; }
+body.error { background: var(--void); }
+body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex; align-items: center; }
+
+/* Footer */
+.site-footer { padding: clamp(2.3rem, 5vw, 4rem) 0; color: rgba(240, 247, 241, .68); background: var(--void); border-top: 1px solid rgba(223, 255, 104, .1); }
+.site-footer-inner { width: min(var(--max), calc(100% - 2 * var(--gutter))); margin-inline: auto; display: grid; grid-template-columns: 1.15fr .85fr; gap: 2.5rem; }
+.footer-brand p { margin: .75rem 0 .25rem; max-width: 30rem; font-size: .88rem; }
+.publisher { color: rgba(240, 247, 241, .42); font-size: .72rem; }
+.footer-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: .4rem 1.2rem; }
+.footer-nav a { min-height: 32px; display: inline-flex; align-items: center; color: rgba(240, 247, 241, .68); font-size: .82rem; text-decoration: none; }
+.footer-nav a:hover { color: var(--lime); }
+.footer-meta { margin: 0; padding-top: 1.2rem; grid-column: 1 / -1; color: rgba(240, 247, 241, .4); border-top: 1px solid rgba(255, 255, 255, .07); font-size: .7rem; }
+
+@media (max-width: 1000px) {
+  .nav-legal { display: none !important; }
+  .toc { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .site-header-inner > .nav { display: none; }
+  .menu { display: block; }
+  .menu .nav {
+    position: absolute;
+    z-index: 55;
+    top: calc(var(--header-h) + env(safe-area-inset-top, 0px) + .4rem);
+    right: var(--gutter);
+    left: var(--gutter);
+    padding: .5rem;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(7, 23, 17, .99);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 1rem;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .32);
+  }
+  .menu[open] .nav { display: flex; }
+  .menu .nav a { width: 100%; padding-inline: .85rem; }
+  .stage-inner { grid-template-columns: 1fr; }
+  .stage-copy { max-width: 44rem; }
+  .hero-fig { width: min(38rem, 100%); }
+  .bento { grid-template-columns: repeat(2, 1fr); }
+  .paths { grid-template-columns: repeat(2, 1fr); }
+  .tile.wide { grid-row: auto; grid-column: 1 / -1; min-height: auto; }
+  .toc { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  :root { --header-h: 3.75rem; }
+  body { background-size: 24px 24px; }
+  .stage { padding-top: 1.9rem; }
+  .stage h1, .page-hero h1 { line-height: 1.02; }
+  .actions > *, .cta-row > * { flex: 1 1 100%; }
+  .ad-banner { grid-template-columns: 1fr; }
+  .partner-link { width: 100%; white-space: normal; }
+  .flow { grid-template-columns: 1fr; }
+  .flow li { min-height: 7.8rem; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .09); }
+  .flow li:last-child { border-bottom: 0; }
+  .flow li:not(:last-child)::after { content: "↓"; top: auto; right: 1rem; bottom: -.68rem; }
+  .bento, .paths, .split-limits, .split-plug, .anatomy, .shop-types, .protocol, .limit-check form, .site-footer-inner { grid-template-columns: 1fr; }
+  .tile.wide { grid-column: auto; }
+  .toc { display: flex; gap: .45rem; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin; }
+  .toc li { min-width: 10rem; flex: 0 0 10rem; scroll-snap-align: start; }
+  .table-wrap { overflow: visible; background: transparent; border: 0; box-shadow: none; }
+  .table-wrap table, .table-wrap thead, .table-wrap tbody, .table-wrap tr, .table-wrap th, .table-wrap td { width: 100%; display: block; }
+  .table-wrap thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  .table-wrap tbody { display: grid; gap: .75rem; }
+  .table-wrap tr { overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 1rem; }
+  .table-wrap td { position: relative; padding: .68rem .85rem .68rem 42%; min-height: 2.8rem; border-bottom: 1px solid var(--line); }
+  .table-wrap td:last-child { border-bottom: 0; }
+  .table-wrap td::before {
+    content: attr(data-label);
+    position: absolute;
+    top: .72rem;
+    left: .85rem;
+    width: 36%;
+    color: var(--forest);
+    font-size: .64rem;
+    font-weight: 790;
+    letter-spacing: .04em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+  .limit-check label, .limit-check .hint, .limit-check input { grid-column: 1; }
+  .legal-item { grid-template-columns: 1fr; gap: .35rem; }
+  .footer-nav { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 440px) {
+  .stage-inner { width: 100%; }
+  .stage-copy { width: calc(100% - 2 * var(--gutter)); margin-inline: auto; }
+  .hero-fig { border-right: 0; border-left: 0; border-radius: 0; }
+  .num-card { margin: 0 .45rem .45rem; }
+  .num-card.two { margin-left: 0; }
+  .frame { padding: .55rem; border-radius: 1rem; }
+  .frame > img, .flow { border-radius: .7rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-fig::after {
+    content: "";
+    position: absolute;
+    inset: -40% auto -40% -35%;
+    width: 22%;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgba(223, 255, 104, .08), transparent);
+    transform: skewX(-12deg);
+    animation: scan 8s ease-in-out infinite 1.2s;
+  }
+  @keyframes scan { 0%, 16% { left: -35%; } 48%, 100% { left: 125%; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+  </style>
   <link rel="stylesheet" href="print.css" media="print">
   <script type="application/ld+json">
 {
@@ -72,7 +927,6 @@
         "height": 180
       },
       "email": "contact@beauty2customer.com",
-      "telephone": "+49-176-45760626",
       "vatID": "DE316150851",
       "identifier": {
         "@type": "PropertyValue",
@@ -234,20 +1088,20 @@
         steckercheck<span>.de</span>
       </a>
       <nav class="nav" aria-label="Hauptnavigation">
-        <a href="/">Start</a>
-        <a href="/800-watt-2000-wp" aria-current="page">Grenzen</a>
-        <a href="/schuko-oder-wieland">Stecker</a>
-        <a href="/balkonkraftwerk-kaufen">Kaufen</a>
+        <a href="/">Ratgeber</a>
+        <a href="/800-watt-2000-wp" aria-current="page">800 / 2000</a>
+        <a href="/schuko-oder-wieland">Anschluss</a>
+        <a href="/balkonkraftwerk-kaufen">Kaufcheck</a>
         <a class="nav-legal" href="/impressum">Impressum</a>
-        <a class="nav-cta" href="/balkonkraftwerk-kaufen">Checkliste</a>
+        <a class="nav-cta" href="#grenzen-pruefen">Grenzen prüfen</a>
       </nav>
       <details class="menu">
         <summary>Menü</summary>
         <nav class="nav" aria-label="Mobil">
-          <a href="/">Start</a>
-          <a href="/800-watt-2000-wp" aria-current="page">Grenzen</a>
-          <a href="/schuko-oder-wieland">Stecker</a>
-          <a href="/balkonkraftwerk-kaufen">Kaufen</a>
+          <a href="/">Ratgeber</a>
+          <a href="/800-watt-2000-wp" aria-current="page">800 / 2000</a>
+          <a href="/schuko-oder-wieland">Anschluss</a>
+          <a href="/balkonkraftwerk-kaufen">Kaufcheck</a>
           <a href="/impressum">Impressum</a>
           <a href="/datenschutz">Datenschutz</a>
         </nav>
@@ -258,18 +1112,22 @@
   <main id="inhalt">
     <header class="page-hero">
       <div class="page-hero-inner">
-        <p class="eyebrow">Erklärung · August 2026</p>
+        <nav class="breadcrumbs" aria-label="Brotkrumen">
+          <a href="/">Ratgeber</a><span aria-hidden="true">/</span><span>800 VA oder 2000 Wp</span>
+        </nav>
+        <p class="eyebrow">EEG-Grenzen verständlich erklärt</p>
         <h1>800 VA oder 2000 Wp: die zwei EEG-Grenzen</h1>
-        <p class="lede">Auf dem Karton stehen oft beide Zahlen. 800&nbsp;Watt, im Gesetz 800&nbsp;VA, gelten für den Wechselrichter. 2000&nbsp;Watt Peak gelten für die Module.</p>
-        <aside class="ad-banner" aria-label="Werbung">
-          <p><strong>Werbung.</strong> Über diesen Link kann der Seitenbetreiber eine Provision erhalten. Der Preis für Sie bleibt gleich.</p>
-          <p>Wenn zum Set ein Speicher dazukommen soll, gibt es Angebote bei <a href="https://www.awin1.com/cread.php?s=4866441&v=68786&q=568335&r=3038929">Zendure</a>.</p>
-        </aside>
+        <p class="lede">Die beiden Werte beschreiben unterschiedliche Bauteile. 800&nbsp;VA gelten für den Wechselrichter, 2000&nbsp;Wp für alle Module zusammen. Wer das trennt, liest Datenblätter deutlich sicherer.</p>
+        <div class="article-meta">
+          <span><a href="/impressum">Redaktion steckercheck.de</a></span>
+          <span>Geprüft am 18. August 2026</span>
+          <span>Mit EEG- und BNetzA-Quellen</span>
+        </div>
       </div>
     </header>
     <article class="wrap narrow prose">
 
-      <p>Ein Steckersolargerät fällt unter die vereinfachten EEG-Regeln, wenn der Wechselrichter insgesamt höchstens 800&nbsp;VA leisten kann und die Module zusammen höchstens 2000&nbsp;Wp haben. Das steht in EEG §&nbsp;8 Abs.&nbsp;5a. Es gilt seit dem Solarpaket I vom 16. Mai 2024. Die Bundesnetzagentur wiederholt es in ihren FAQ. Ins Marktstammdatenregister müssen Sie trotzdem. In diesen Grenzen darf der Netzbetreiber keine Extra-Meldung mehr verlangen, wenn Sie auf Einspeisevergütung verzichten.</p>
+      <p><strong>Die Kurzantwort:</strong> Für den vereinfachten EEG-Weg darf der Wechselrichter insgesamt höchstens 800&nbsp;VA leisten; die Module dürfen zusammen höchstens 2000&nbsp;Wp haben. Die Registrierung im Marktstammdatenregister bleibt nötig. Eine zusätzliche Meldung beim Netzbetreiber entfällt innerhalb dieser Grenzen, wenn Sie auf Einspeisevergütung verzichten.</p>
 
       <blockquote class="pull">
         <p>800 VA gelten für den Wechselrichter, 2000 Wp für die Module.</p>
@@ -293,6 +1151,11 @@
           </li>
         </ol>
         <figcaption>Watt Peak beschreiben den Generator. Voltampere beschreiben, was in der Leitung ankommt. Quelle: EEG § 8 Abs. 5a.</figcaption>
+      </figure>
+
+      <figure class="frame">
+        <img src="img/800-va-2000-wp.svg" width="1200" height="680" alt="Vergleich: 2000 Wp als Summe der Module (Gleichstrom, Laborwert) gegen 800 VA am Wechselrichter (Wechselstrom ins Haus)" loading="lazy" decoding="async">
+        <figcaption>2000&nbsp;Wp sind die Module, 800&nbsp;VA der Wechselrichter. <a href="img/800-va-2000-wp.svg" download>Diagramm als SVG herunterladen</a>.</figcaption>
       </figure>
 
       <h2 id="grenzen">Die zwei Grenzen</h2>
@@ -384,22 +1247,34 @@
         <p class="lede">800&nbsp;VA begrenzen den Wechselrichter. 2000&nbsp;Wp begrenzen die Module. Beide Zahlen stehen in EEG §&nbsp;8 Abs.&nbsp;5a.</p>
 
         <form id="limit-form" novalidate>
-          <label for="wr">Wechselrichter, höchste wählbare Leistung in VA</label>
-          <p class="hint">Es zählt die höchste Stufe, die sich einstellen lässt. Eine Drossel in der App ändert die Grenze nicht.</p>
-          <input id="wr" name="wr" type="number" inputmode="decimal" min="0" step="any" required>
+          <div class="field">
+            <label for="wr">Wechselrichter, höchste wählbare Leistung in VA</label>
+            <p class="hint" id="wr-hint">Es zählt die höchste Stufe, die sich einstellen lässt. Eine Drossel in der App ändert die Grenze nicht.</p>
+            <input id="wr" name="wr" type="number" inputmode="decimal" min="0" step="any" required aria-describedby="wr-hint">
+          </div>
 
-          <label for="wp">Summe der Module in Wp</label>
-          <p class="hint">Alle Module hinter demselben Gerät addieren.</p>
-          <input id="wp" name="wp" type="number" inputmode="decimal" min="0" step="any" required>
+          <div class="field">
+            <label for="wp">Summe der Module in Wp</label>
+            <p class="hint" id="wp-hint">Die Wp-Angaben aller Module dieses Geräts addieren.</p>
+            <input id="wp" name="wp" type="number" inputmode="decimal" min="0" step="any" required aria-describedby="wp-hint">
+          </div>
 
-          <label for="more">Weitere Steckersolargeräte hinter demselben Zähler, VA</label>
-          <p class="hint">Leer lassen, wenn Sie nur ein Gerät haben. Mehrere Geräte werden addiert.</p>
-          <input id="more" name="more" type="number" inputmode="decimal" min="0" step="any" value="0">
+          <div class="field">
+            <label for="more-va">Weitere Geräte hinter demselben Zähler, VA</label>
+            <p class="hint" id="more-va-hint">Leer lassen, wenn es kein weiteres Gerät gibt.</p>
+            <input id="more-va" name="more-va" type="number" inputmode="decimal" min="0" step="any" value="0" aria-describedby="more-va-hint">
+          </div>
+
+          <div class="field">
+            <label for="more-wp">Module weiterer Geräte hinter demselben Zähler, Wp</label>
+            <p class="hint" id="more-wp-hint">Auch die Modul-Wp weiterer Geräte werden zusammengerechnet.</p>
+            <input id="more-wp" name="more-wp" type="number" inputmode="decimal" min="0" step="any" value="0" aria-describedby="more-wp-hint">
+          </div>
 
           <button type="submit">Grenzen prüfen</button>
         </form>
 
-        <div class="result" id="out" hidden></div>
+        <div class="result" id="out" role="status" aria-live="polite" hidden></div>
 
         <p class="sources">EEG §&nbsp;8 Abs.&nbsp;5a · <a href="https://www.gesetze-im-internet.de/eeg_2014/__8.html">gesetze-im-internet.de</a> · FAQ der Bundesnetzagentur, <a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/Solaranlagen/Balkon_table.html">Balkon-Solaranlagen</a></p>
       </section>
@@ -426,30 +1301,33 @@
             e.preventDefault();
             var wr = num(document.getElementById("wr"));
             var wp = num(document.getElementById("wp"));
-            var moreRaw = String(document.getElementById("more").value).trim();
-            var more = moreRaw === "" ? 0 : num(document.getElementById("more"));
+            var moreVaRaw = String(document.getElementById("more-va").value).trim();
+            var moreWpRaw = String(document.getElementById("more-wp").value).trim();
+            var moreVa = moreVaRaw === "" ? 0 : num(document.getElementById("more-va"));
+            var moreWp = moreWpRaw === "" ? 0 : num(document.getElementById("more-wp"));
 
-            if (wr === null || wp === null || Number.isNaN(wr) || Number.isNaN(wp) || Number.isNaN(more)) {
+            if (wr === null || wp === null || Number.isNaN(wr) || Number.isNaN(wp) || Number.isNaN(moreVa) || Number.isNaN(moreWp)) {
               out.hidden = false;
               out.dataset.state = "";
               out.innerHTML = "<p>Tragen Sie die Wechselrichterleistung in VA und die Modulsumme in Wp ein.</p>";
               return;
             }
 
-            var combined = wr + more;
-            var vaOk = combined <= LIMIT_VA;
-            var wpOk = wp <= LIMIT_WP;
+            var combinedVa = wr + moreVa;
+            var combinedWp = wp + moreWp;
+            var vaOk = combinedVa <= LIMIT_VA;
+            var wpOk = combinedWp <= LIMIT_WP;
             var bits = [];
 
             if (vaOk && wpOk) {
-              bits.push("<p>In diesen Grenzen. Wechselrichter zusammen " + fmt(combined) + "&nbsp;VA, Module " + fmt(wp) + "&nbsp;Wp.</p>");
+              bits.push("<p>In diesen Grenzen. Wechselrichter zusammen " + fmt(combinedVa) + "&nbsp;VA, Module zusammen " + fmt(combinedWp) + "&nbsp;Wp.</p>");
               out.dataset.state = "ok";
             } else {
               if (!vaOk) {
-                bits.push("<p>Die Wechselrichterleistung liegt zusammen bei " + fmt(combined) + "&nbsp;VA. Die Grenze in EEG §&nbsp;8 Abs.&nbsp;5a ist 800&nbsp;VA.</p>");
+                bits.push("<p>Die Wechselrichterleistung liegt zusammen bei " + fmt(combinedVa) + "&nbsp;VA. Die Grenze in EEG §&nbsp;8 Abs.&nbsp;5a ist 800&nbsp;VA.</p>");
               }
               if (!wpOk) {
-                bits.push("<p>Die Modulsumme liegt bei " + fmt(wp) + "&nbsp;Wp. Die Grenze in EEG §&nbsp;8 Abs.&nbsp;5a ist 2000&nbsp;Wp.</p>");
+                bits.push("<p>Die Modulsumme liegt zusammen bei " + fmt(combinedWp) + "&nbsp;Wp. Die Grenze in EEG §&nbsp;8 Abs.&nbsp;5a ist 2000&nbsp;Wp.</p>");
               }
               out.dataset.state = "over";
             }
@@ -518,19 +1396,19 @@
     <div class="site-footer-inner">
       <div class="footer-brand">
         <a class="wordmark" href="/">steckercheck<span>.de</span></a>
-        <p>Informationen zu Steckersolargeräten in Deutschland.</p>
+        <p>Steckersolar, klar geprüft: Regeln, Anschluss und Kauf.</p>
         <span class="publisher">AC Beauty to Customer UG (haftungsbeschränkt), Berlin</span>
       </div>
       <nav class="footer-nav" aria-label="Fußzeile">
-        <a href="/">Start</a>
-        <a href="/800-watt-2000-wp">Grenzen</a>
-        <a href="/schuko-oder-wieland">Stecker</a>
-        <a href="/balkonkraftwerk-kaufen">Kaufen</a>
+        <a href="/">Ratgeber</a>
+        <a href="/800-watt-2000-wp">800 / 2000</a>
+        <a href="/schuko-oder-wieland">Anschluss</a>
+        <a href="/balkonkraftwerk-kaufen">Kaufcheck</a>
         <a href="/impressum">Impressum</a>
         <a href="/datenschutz">Datenschutz</a>
-        <a href="/impressum#affiliate">Werbung</a>
+        <a href="/impressum#affiliate">Partnerlinks</a>
       </nav>
-      <p class="footer-meta">Stand der Inhalte: August 2026. Quellen: EEG, Bundesnetzagentur, Marktstammdatenregister, Verbraucherzentrale, ADAC. Diese Seite ersetzt keine Rechtsberatung.</p>
+      <p class="footer-meta">Inhalte geprüft am 18. August 2026. Quellen: EEG, Bundesnetzagentur, Marktstammdatenregister, Verbraucherzentrale und ADAC. Kommerzielle Links sind direkt gekennzeichnet. Keine Rechts- oder Elektroberatung.</p>
     </div>
   </footer>
 </body>

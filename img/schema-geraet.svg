@@ -55,7 +55,7 @@
     <circle cx="1074" cy="226" r="40" fill="#dbe3da"/>
     <circle cx="1058" cy="226" r="7" fill="#101714"/>
     <circle cx="1090" cy="226" r="7" fill="#101714"/>
-    <text x="1008" y="420" font-family="system-ui, sans-serif" font-size="42" font-weight="650" fill="#f4f6f2">Steckdose</text>
+    <text x="970" y="420" font-family="system-ui, sans-serif" font-size="42" font-weight="650" fill="#f4f6f2">Steckdose</text>
     <text x="1008" y="466" font-family="system-ui, sans-serif" font-size="30" fill="#9fb8a8">Hausnetz</text>
   </g>
 </svg>
