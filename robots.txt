@@ -31,3 +31,4 @@ Allow: /
 Sitemap: https://steckercheck.de/sitemap.xml
 # LLM-Index: https://steckercheck.de/llms.txt
 # LLM-Volltext: https://steckercheck.de/llms-full.txt
+# OpenAPI: https://steckercheck.de/openapi.json

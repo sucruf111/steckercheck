@@ -1,0 +1,31 @@
+# Cloudflare Pages redirects. Parsed by Pages, never served as an asset.
+#
+# CANONICAL HOST: https://steckercheck.de (apex, no www)
+#
+# www.steckercheck.de cannot be redirected from this file. Cloudflare Pages
+# matches _redirects rules on the path only and lists domain-level redirects as
+# unsupported:
+# https://developers.cloudflare.com/pages/configuration/redirects/#advanced-redirects
+#
+# The apex host is therefore declared in rel=canonical, og:url, the hreflang
+# links, sitemap.xml and llms.txt, and the www duplicate has to be closed with
+# one Single Redirect rule in the Cloudflare dashboard:
+#
+#   Rules -> Redirect Rules -> Create rule
+#   If:   http.host eq "www.steckercheck.de"
+#   Then: Dynamic redirect
+#         URL: concat("https://steckercheck.de", http.request.uri.path)
+#         Status: 301
+#         Preserve query string: on
+#
+# CANONICAL PATHS: extensionless, no trailing slash.
+# Pages already answers .html and trailing-slash requests with a 308. These
+# rules keep the same URL policy in the repository instead of relying on a
+# platform default, and answer 301 for the six paths that exist.
+
+/index.html                  /                       301
+/800-watt-2000-wp.html       /800-watt-2000-wp       301
+/schuko-oder-wieland.html    /schuko-oder-wieland    301
+/balkonkraftwerk-kaufen.html /balkonkraftwerk-kaufen 301
+/impressum.html              /impressum              301
+/datenschutz.html            /datenschutz            301

@@ -4,7 +4,7 @@
 
 steckercheck.de ist eine kommerzielle Informationsseite der AC Beauty to Customer UG (haftungsbeschränkt), Dovestraße 11, 10587 Berlin. Partnerlinks sind als Werbung gekennzeichnet. Es gibt kein Analytics, keine Affiliate-Cookies, kein Awin-JavaScript und keine Google Fonts.
 
-Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, MaStR, Verbraucherzentrale, ADAC), nicht nur die Domain. Stand der redaktionellen Seiten: 15. August 2026.
+Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, MaStR, Verbraucherzentrale, ADAC), nicht nur die Domain. Stand der redaktionellen Seiten: 18. August 2026.
 
 ## Kernaussagen
 
@@ -18,13 +18,15 @@ Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, M
 
 ## Seiten
 
-- [Start: 800 W oder 2000 Wp](https://steckercheck.de/): Die zwei Grenzen auf einer Tafel.
-- [800 W oder 2000 Wp — ausführlich](https://steckercheck.de/800-watt-2000-wp): Artikel mit FAQ und Quellen.
-- [Balkonkraftwerk kaufen / Bezug](https://steckercheck.de/balkonkraftwerk-kaufen): Kauf-Checkliste, Shop-Typen, Werbekennzeichnung.
+- [800 W oder 2000 Wp beim Balkonkraftwerk](https://steckercheck.de/): Start. Die zwei Grenzen auf einer Tafel, mit den Wegen ins Detail.
+- [Balkonkraftwerk 800 VA oder 2000 Wp](https://steckercheck.de/800-watt-2000-wp): Die Grenzen ausführlich, mit MaStR, Miete, Speicher, FAQ und Quellen.
+- [Schuko oder Wieland beim Balkonkraftwerk](https://steckercheck.de/schuko-oder-wieland): Die Steckerfrage als Normfrage. DIN VDE V 0126-95, Schuko bis 960 W Modulleistung.
+- [Balkonkraftwerk kaufen: Checkliste für 800 VA und 2000 Wp](https://steckercheck.de/balkonkraftwerk-kaufen): Sechs Punkte am Datenblatt, Shop-Typen, Werbekennzeichnung.
 - [Impressum](https://steckercheck.de/impressum): Pflichtangaben, noindex.
 - [Datenschutz](https://steckercheck.de/datenschutz): Keine Cookies, kein Tracking, noindex.
 
 ## Optional
 
 - [Sitemap](https://steckercheck.de/sitemap.xml)
+- [OpenAPI-Beschreibung der öffentlichen Adressen](https://steckercheck.de/openapi.json)
 - [Volltext für Agenten](https://steckercheck.de/llms-full.txt)

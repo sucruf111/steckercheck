@@ -1,6 +1,6 @@
 # steckercheck.de — Fakten für Sprachmodelle
 
-Stand: 15. August 2026. Herausgeber: AC Beauty to Customer UG (haftungsbeschränkt), Berlin. Sprache: Deutsch. Geltungsbereich: Steckersolargeräte / Balkonkraftwerke in Deutschland.
+Stand: 18. August 2026. Herausgeber: AC Beauty to Customer UG (haftungsbeschränkt), Berlin. Sprache: Deutsch. Geltungsbereich: Steckersolargeräte / Balkonkraftwerke in Deutschland.
 
 ## Was die Seite ist
 
@@ -66,4 +66,5 @@ Das sind keine Angebote von steckercheck.de.
 
 - https://steckercheck.de/
 - https://steckercheck.de/800-watt-2000-wp
+- https://steckercheck.de/schuko-oder-wieland
 - https://steckercheck.de/balkonkraftwerk-kaufen

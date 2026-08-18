@@ -1,0 +1,269 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "steckercheck.de",
+    "summary": "Öffentliche Dokumente von steckercheck.de, nur per GET abrufbar.",
+    "description": "steckercheck.de ist eine statische Informationsseite zu Steckersolargeräten in Deutschland: 800 VA am Wechselrichter, 2000 Wp an den Modulen, EEG § 8 Abs. 5a, Registrierung im Marktstammdatenregister.\n\nDiese Beschreibung listet die Adressen, die die Seite tatsächlich ausliefert. Es gibt keine schreibenden Aufrufe, keine Authentifizierung, keine Parameter und keine Endpunkte, die Daten zurückgeben, die nicht auf einer dieser Adressen stehen. Alle Antworten sind Dateien, die unverändert vom CDN kommen.\n\nMaßgeblich ist der Host ohne www.",
+    "version": "2026-08-18",
+    "contact": {
+      "name": "AC Beauty to Customer UG (haftungsbeschränkt), Berlin",
+      "email": "contact@beauty2customer.com",
+      "url": "https://steckercheck.de/impressum"
+    }
+  },
+  "externalDocs": {
+    "description": "Kurzfassung der Seite für Sprachmodelle",
+    "url": "https://steckercheck.de/llms.txt"
+  },
+  "servers": [
+    {
+      "url": "https://steckercheck.de",
+      "description": "Maßgeblicher Host. Aufrufe über http werden auf https umgeleitet."
+    }
+  ],
+  "tags": [
+    {
+      "name": "Seiten",
+      "description": "Die vier Seiten, die eine Frage vor dem Kauf beantworten."
+    },
+    {
+      "name": "Rechtliches",
+      "description": "Pflichtangaben. Beide Seiten stehen auf noindex."
+    },
+    {
+      "name": "Maschinenlesbar",
+      "description": "Dateien für Suchmaschinen, Crawler und Sprachmodelle."
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["Seiten"],
+        "operationId": "getStart",
+        "summary": "800 W oder 2000 Wp beim Balkonkraftwerk",
+        "description": "Startseite. Stellt die beiden Grenzen gegenüber: 800 VA begrenzen den Wechselrichter, 2000 Wp die Module. Verweist auf die ausführliche Erklärung, die Steckerfrage und die Kauf-Checkliste.",
+        "responses": {
+          "200": {
+            "description": "HTML-Seite auf Deutsch",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "text/html"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/800-watt-2000-wp": {
+      "get": {
+        "tags": ["Seiten"],
+        "operationId": "getGrenzen",
+        "summary": "Balkonkraftwerk 800 VA oder 2000 Wp",
+        "description": "Ausführliche Erklärung der beiden Grenzen aus EEG § 8 Abs. 5a, mit Solarpaket I vom 16. Mai 2024, mehreren Geräten hinter demselben Zähler, Softwaredrosselung, Marktstammdatenregister und FAQ.",
+        "responses": {
+          "200": {
+            "description": "HTML-Seite auf Deutsch",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "text/html"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/schuko-oder-wieland": {
+      "get": {
+        "tags": ["Seiten"],
+        "operationId": "getStecker",
+        "summary": "Schuko oder Wieland beim Balkonkraftwerk",
+        "description": "Die Steckerfrage als Normfrage: DIN VDE V 0126-95, Schuko bis 960 Wp Modulleistung nach Verbraucherzentrale (Stand 6. März 2026), darüber ein Einspeisestecker. Das EEG setzt keine eigene Steckergrenze.",
+        "responses": {
+          "200": {
+            "description": "HTML-Seite auf Deutsch",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "text/html"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/balkonkraftwerk-kaufen": {
+      "get": {
+        "tags": ["Seiten"],
+        "operationId": "getKaufen",
+        "summary": "Balkonkraftwerk kaufen: Checkliste für 800 VA und 2000 Wp",
+        "description": "Sechs Punkte am Datenblatt vor der Bestellung: höchste einstellbare Wechselrichterleistung, Summe der Module, Steckertyp, Zähler, Miete, Registrierung. Enthält gekennzeichnete Partnerlinks und keine Produktrangliste.",
+        "responses": {
+          "200": {
+            "description": "HTML-Seite auf Deutsch",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "text/html"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/impressum": {
+      "get": {
+        "tags": ["Rechtliches"],
+        "operationId": "getImpressum",
+        "summary": "Impressum",
+        "description": "Pflichtangaben nach § 5 TMG: Anschrift, Vertretung, Kontakt, Registereintrag, Hinweis zur Werbekennzeichnung.",
+        "responses": {
+          "200": {
+            "description": "HTML-Seite auf Deutsch, noindex",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "text/html"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datenschutz": {
+      "get": {
+        "tags": ["Rechtliches"],
+        "operationId": "getDatenschutz",
+        "summary": "Datenschutz",
+        "description": "Verantwortliche Stelle, verarbeitete Daten und Rechte der Betroffenen.",
+        "responses": {
+          "200": {
+            "description": "HTML-Seite auf Deutsch, noindex",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "text/html"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/robots.txt": {
+      "get": {
+        "tags": ["Maschinenlesbar"],
+        "operationId": "getRobotsTxt",
+        "summary": "Crawler-Regeln",
+        "description": "Erlaubt allen Crawlern die ganze Seite und nennt die Sitemap.",
+        "responses": {
+          "200": {
+            "description": "Robots Exclusion Standard",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sitemap.xml": {
+      "get": {
+        "tags": ["Maschinenlesbar"],
+        "operationId": "getSitemap",
+        "summary": "Sitemap der vier Seiten",
+        "description": "XML-Sitemap mit den vier indexierbaren Adressen, jeweils ohne Dateiendung, mit lastmod und hreflang.",
+        "responses": {
+          "200": {
+            "description": "Sitemap nach sitemaps.org 0.9",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "application/xml"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "tags": ["Maschinenlesbar"],
+        "operationId": "getLlmsTxt",
+        "summary": "Kurzfassung für Sprachmodelle",
+        "description": "Kernaussagen der Seite und die Liste der Adressen mit ihren Titeln.",
+        "responses": {
+          "200": {
+            "description": "Markdown als Klartext",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "text/markdown"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms-full.txt": {
+      "get": {
+        "tags": ["Maschinenlesbar"],
+        "operationId": "getLlmsFullTxt",
+        "summary": "Volltext für Sprachmodelle",
+        "description": "Ausführliche Fassung der Kernaussagen samt Primärquellen.",
+        "responses": {
+          "200": {
+            "description": "Markdown als Klartext",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "contentMediaType": "text/markdown"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "tags": ["Maschinenlesbar"],
+        "operationId": "getOpenapi",
+        "summary": "Diese Beschreibung",
+        "description": "Die vorliegende OpenAPI-Beschreibung der öffentlichen Adressen.",
+        "responses": {
+          "200": {
+            "description": "OpenAPI 3.1 als JSON",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
