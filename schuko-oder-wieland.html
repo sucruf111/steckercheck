@@ -60,6 +60,7 @@
   --radius-sm: .85rem;
   --max: 74rem;
   --read: 46rem;
+  --rail: 60rem;
   --gutter: clamp(1rem, 4.6vw, 1.75rem);
   --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --display: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
@@ -577,11 +578,9 @@ a:hover { color: var(--forest-dark); }
 .page, .prose, .dossier { margin-block: clamp(2.4rem, 6vw, 5.2rem); }
 .prose, .dossier { color: #26342d; font-size: clamp(1rem, 1.2vw, 1.06rem); }
 .prose > *, .dossier > * { max-width: var(--read); margin-inline: auto; }
-.prose > .frame, .prose > .table-wrap, .prose > .split-limits, .prose > .split-plug,
-.prose > .limit-check, .prose > .faq, .prose > .cta-row,
-.dossier > .frame, .dossier > .table-wrap, .dossier > .split-limits, .dossier > .split-plug,
-.dossier > .anatomy, .dossier > .protocol, .dossier > .price-note, .dossier > .shop-types,
-.dossier > .faq, .dossier > .cta-row, .dossier > nav, .dossier > .ad-banner { max-width: 60rem; }
+/* One shared module rail (--rail) so tables, frames, FAQ & co. render the same width on every page */
+:is(.prose, .dossier) > :is(.frame, .table-wrap, .split-limits, .split-plug, .limit-check,
+.anatomy, .protocol, .price-note, .shop-types, .faq, .cta-row, nav, .ad-banner) { max-width: var(--rail); }
 .prose > h2, .dossier > h2, .page h2 {
   margin-top: clamp(2.7rem, 7vw, 4.8rem);
   margin-bottom: .75rem;
@@ -1109,7 +1108,7 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
         </div>
       </div>
     </header>
-    <article class="wrap narrow prose">
+    <article class="wrap prose">
 
       <h2>Die kurze Entscheidung</h2>
       <p><strong>Bis 960&nbsp;W Modulleistung:</strong> Schuko ist vorgesehen, wenn das Gerät die Sicherheitsvorgaben erfüllt. <strong>Über 960&nbsp;W:</strong> Die Produktnorm sieht eine spezielle Energiesteckvorrichtung vor. Eine Förderung kann den Wieland-Anschluss auch darunter verlangen. Quelle: Verbraucherzentrale, Stand 6.&nbsp;März 2026.</p>
