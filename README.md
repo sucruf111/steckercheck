@@ -2,7 +2,7 @@
 
 Static site for https://steckercheck.de/ — Steckersolar 800 VA / 2000 Wp, sourced from EEG, BNetzA, MaStR.
 
-No analytics, no Awin JS, no Google Fonts CDN. IBM Plex Sans is self-hosted (SIL OFL) and is the only delivered webfont; the older Source Serif file remains in `/fonts` but is no longer referenced. Illustrations are hand-built SVGs in `/img` (only `og.jpg` and `apple-touch-icon.png` are raster). Partner links are plain `<a href>` elements with `rel="sponsored nofollow"`, never a script. Every link is immediately labelled **Werbung · Affiliate-Link** and carries a short commission note. They currently run on `index.html` and `balkonkraftwerk-kaufen.html`.
+No analytics, no Awin JS, no Google Fonts CDN. IBM Plex Sans is self-hosted (SIL OFL) and is the only webfont in `/fonts`. Illustrations are hand-built SVGs in `/img` (only `og.jpg` and `apple-touch-icon.png` are raster). Partner links are plain `<a href>` elements with `rel="sponsored nofollow"`, never a script. Every link is immediately labelled **Werbung · Affiliate-Link** and carries a short commission note. They currently run on `index.html` and `balkonkraftwerk-kaufen.html`.
 
 The four public pages inline the complete screen CSS to remove the render-blocking stylesheet request on the first view. `site.css` is the readable source and is loaded directly by the legal pages and `404.html`; when the design system changes, keep the four inline copies in sync. `print.css` remains a non-blocking print-only stylesheet.
 
