@@ -4,7 +4,7 @@
     "title": "steckercheck.de",
     "summary": "Öffentliche Dokumente von steckercheck.de, nur per GET abrufbar.",
     "description": "steckercheck.de ist eine statische Informationsseite zu Steckersolargeräten in Deutschland: 800 VA am Wechselrichter, 2000 Wp an den Modulen, EEG § 8 Abs. 5a, Registrierung im Marktstammdatenregister.\n\nDiese Beschreibung listet die Adressen, die die Seite tatsächlich ausliefert. Es gibt keine schreibenden Aufrufe, keine Authentifizierung, keine Parameter und keine Endpunkte, die Daten zurückgeben, die nicht auf einer dieser Adressen stehen. Alle Antworten sind Dateien, die unverändert vom CDN kommen.\n\nMaßgeblich ist der Host ohne www.",
-    "version": "2026-08-18",
+    "version": "2026-08-19",
     "contact": {
       "name": "AC Beauty to Customer UG (haftungsbeschränkt), Berlin",
       "email": "contact@beauty2customer.com",
@@ -103,7 +103,7 @@
       "get": {
         "tags": ["Seiten"],
         "operationId": "getKaufen",
-        "summary": "Balkonkraftwerk kaufen: 6-Punkte-Check",
+        "summary": "Balkonkraftwerk kaufen 2026: 6-Punkte-Check",
         "description": "Sechs Punkte am Datenblatt vor der Bestellung: höchste einstellbare Wechselrichterleistung, Summe der Module, Steckertyp, Zähler, Miete, Registrierung. Enthält gekennzeichnete Partnerlinks und keine Produktrangliste.",
         "responses": {
           "200": {
