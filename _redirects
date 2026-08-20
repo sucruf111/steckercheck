@@ -8,8 +8,11 @@
 # https://developers.cloudflare.com/pages/configuration/redirects/#advanced-redirects
 #
 # The apex host is therefore declared in rel=canonical, og:url, the hreflang
-# links, sitemap.xml and llms.txt, and the www duplicate has to be closed with
-# one Single Redirect rule in the Cloudflare dashboard:
+# links, sitemap.xml and llms.txt. A zone Redirect Rule must send www to apex;
+# this file cannot do that. Verified live on 2026-08-20:
+#   https://www.steckercheck.de/800-watt-2000-wp → 301 https://steckercheck.de/800-watt-2000-wp
+#
+# If that 301 regresses, recreate the rule in the Cloudflare dashboard:
 #
 #   Rules -> Redirect Rules -> Create rule
 #   If:   http.host eq "www.steckercheck.de"
@@ -19,13 +22,13 @@
 #         Preserve query string: on
 #
 # CANONICAL PATHS: extensionless, no trailing slash.
-# Pages already answers .html and trailing-slash requests with a 308. These
-# rules keep the same URL policy in the repository instead of relying on a
-# platform default, and answer 301 for the six paths that exist.
+# Pages already answers leftover .html and trailing-slash requests with a 308.
+# These rules keep the same policy in the repository and answer 301 with an
+# absolute Location on the apex host.
 
-/index.html                  /                       301
-/800-watt-2000-wp.html       /800-watt-2000-wp       301
-/schuko-oder-wieland.html    /schuko-oder-wieland    301
-/balkonkraftwerk-kaufen.html /balkonkraftwerk-kaufen 301
-/impressum.html              /impressum              301
-/datenschutz.html            /datenschutz            301
+/index.html                  https://steckercheck.de/                       301
+/800-watt-2000-wp.html       https://steckercheck.de/800-watt-2000-wp       301
+/schuko-oder-wieland.html    https://steckercheck.de/schuko-oder-wieland    301
+/balkonkraftwerk-kaufen.html https://steckercheck.de/balkonkraftwerk-kaufen 301
+/impressum.html              https://steckercheck.de/impressum              301
+/datenschutz.html            https://steckercheck.de/datenschutz            301

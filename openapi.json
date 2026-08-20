@@ -4,7 +4,7 @@
     "title": "steckercheck.de",
     "summary": "Öffentliche Dokumente von steckercheck.de, nur per GET abrufbar.",
     "description": "steckercheck.de ist eine statische Informationsseite zu Steckersolargeräten in Deutschland: 800 VA am Wechselrichter, 2000 Wp an den Modulen, EEG § 8 Abs. 5a, Registrierung im Marktstammdatenregister.\n\nDiese Beschreibung listet die Adressen, die die Seite tatsächlich ausliefert. Es gibt keine schreibenden Aufrufe, keine Authentifizierung, keine Parameter und keine Endpunkte, die Daten zurückgeben, die nicht auf einer dieser Adressen stehen. Alle Antworten sind Dateien, die unverändert vom CDN kommen.\n\nMaßgeblich ist der Host ohne www.",
-    "version": "2026-08-19",
+    "version": "2026-08-20",
     "contact": {
       "name": "AC Beauty to Customer UG (haftungsbeschränkt), Berlin",
       "email": "contact@beauty2customer.com",
@@ -61,7 +61,7 @@
       "get": {
         "tags": ["Seiten"],
         "operationId": "getGrenzen",
-        "summary": "Balkonkraftwerk 800 VA oder 2000 Wp",
+        "summary": "Steckersolargerät 800 VA und 2000 Wp",
         "description": "Ausführliche Erklärung der beiden Grenzen aus EEG § 8 Abs. 5a, mit Solarpaket I vom 16. Mai 2024, mehreren Geräten hinter demselben Zähler, Softwaredrosselung, Marktstammdatenregister und FAQ.",
         "responses": {
           "200": {
