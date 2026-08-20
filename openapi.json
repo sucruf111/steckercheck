@@ -61,7 +61,7 @@
       "get": {
         "tags": ["Seiten"],
         "operationId": "getGrenzen",
-        "summary": "Steckersolargerät 800 VA und 2000 Wp",
+        "summary": "Steckersolargerät 800 VA und 2000 Wp laut Bundesnetzagentur",
         "description": "Ausführliche Erklärung der beiden Grenzen aus EEG § 8 Abs. 5a, mit Solarpaket I vom 16. Mai 2024, mehreren Geräten hinter demselben Zähler, Softwaredrosselung, Marktstammdatenregister und FAQ.",
         "responses": {
           "200": {

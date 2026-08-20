@@ -27,7 +27,7 @@ PUBLIC = (
 )
 LEGAL = ("impressum.html", "datenschutz.html")
 KNOWN_HTML = PUBLIC + LEGAL + ("404.html", "google8fd2b20152f4b794.html")
-TITLE_800 = "Steckersolargerät 800 VA und 2000 Wp — steckercheck.de"
+TITLE_800 = "Steckersolargerät 800 VA und 2000 Wp laut Bundesnetzagentur — steckercheck.de"
 H1_800 = "Steckersolargerät: 800 VA und 2000 Wp"
 CANONICALS = {
     "index.html": "https://steckercheck.de/",
@@ -178,11 +178,11 @@ if locs != expected_locs:
 openapi = json.loads(read("openapi.json"))
 if openapi["info"]["version"] != "2026-08-20":
     fail("openapi.json version should match the 800-page edit day")
-if openapi["paths"]["/800-watt-2000-wp"]["get"]["summary"] != "Steckersolargerät 800 VA und 2000 Wp":
+if openapi["paths"]["/800-watt-2000-wp"]["get"]["summary"] != "Steckersolargerät 800 VA und 2000 Wp laut Bundesnetzagentur":
     fail("openapi.json 800-page summary drifted")
 
 llms = read("llms.txt")
-if "Steckersolargerät 800 VA und 2000 Wp" not in llms:
+if "Steckersolargerät 800 VA und 2000 Wp laut Bundesnetzagentur" not in llms:
     fail("llms.txt must use the live 800-page title")
 if ".html" in llms:
     fail("llms.txt must not list .html URLs")
