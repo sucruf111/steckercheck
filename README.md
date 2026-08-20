@@ -10,15 +10,17 @@ Public pages: `index.html`, `800-watt-2000-wp.html`, `schuko-oder-wieland.html`,
 
 Deploy: zip the public files and replace-deploy the existing Cloudflare Pages project `steckercheck`. There is no build step.
 
+Invariants for the four public URLs: `python3 scripts/check-site.py`.
+
 ## URLs
 
-Public URLs are extensionless and carry no trailing slash: `/800-watt-2000-wp`, not `/800-watt-2000-wp.html`. `rel=canonical`, `og:url`, the hreflang links, `sitemap.xml`, `llms.txt` and `openapi.json` all use that form, and so does every internal link. `_redirects` answers 301 for the `.html` paths.
+Public URLs are extensionless and carry no trailing slash: `/800-watt-2000-wp`, not `/800-watt-2000-wp.html`. `rel=canonical`, `og:url`, the hreflang links, `sitemap.xml`, `llms.txt` and `openapi.json` all use that form, and so does every internal link. `_redirects` answers 301 for leftover `.html` paths, with an absolute Location on the apex host.
 
-## Open item: www must be redirected in the Cloudflare dashboard
+## www → apex (dashboard rule, verified 2026-08-20)
 
-`https://www.steckercheck.de/` answers 200 with the same HTML as the apex host. Every page is therefore reachable under two hostnames, and only `rel=canonical` tells search engines which one counts.
+`https://www.steckercheck.de/800-watt-2000-wp` answers `301` to `https://steckercheck.de/800-watt-2000-wp`. That host-level hop cannot live in `_redirects`: Cloudflare Pages matches those rules on the path alone and [lists domain-level redirects as unsupported](https://developers.cloudflare.com/pages/configuration/redirects/#advanced-redirects).
 
-This cannot be fixed from the repository. Cloudflare Pages matches `_redirects` rules on the path alone and [lists domain-level redirects as unsupported](https://developers.cloudflare.com/pages/configuration/redirects/#advanced-redirects), and `_headers` cannot redirect at all. One Single Redirect rule closes it:
+If the 301 regresses, recreate the zone rule:
 
 1. Cloudflare dashboard → the `steckercheck.de` zone → **Rules** → **Redirect Rules** → **Create rule**
 2. If: `http.host eq "www.steckercheck.de"`
