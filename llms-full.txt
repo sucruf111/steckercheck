@@ -27,6 +27,10 @@ Rechtsgrundlage: EEG § 8 Abs. 5a. In Kraft mit Solarpaket I am 16. Mai 2024. Be
 
 Verbraucherzentrale, Stand 6. März 2026: Produktnorm DIN VDE V 0126-95 gilt seit 1.12.2025 für Geräte ohne Speicher. Schuko bis 960 W Modulleistung; darüber spezieller Einspeisestecker. Förderprogramme können Wieland trotzdem verlangen. EEG erlaubt Module bis 2 kW unabhängig vom Stecker.
 
+Die 960 W sind hergeleitet: 800 W + 20 % = 960 W (DKE-FAQ zur Produktnorm, Frage 9). Drei zulässige Schuko-Wege (Frage 10): Schutzumhüllung an den Kontakten, interner Trennschalter, oder Isolierung und sichere Trennung im Wechselrichter. Wird der Stecker gezogen, muss die berührbare Spannung innerhalb von 1 Sekunde auf höchstens 34 Volt fallen; der Wechselrichter schaltet in 100 Millisekunden ab (Frage 11.1).
+
+Mehrfachsteckdosen sind nicht zulässig. Die Anschlussleitung muss mindestens 5 Meter lang sein. Verlängerungsleitungen nur, wenn der Hersteller sie zulässt (DKE-FAQ, Frage 12).
+
 ## Speicher
 
 Dieselbe Verbraucherzentrale-Seite: Speicher sind nicht von der vereinfachten Produktnorm erfasst. Anmeldung und Anschluss durch zugelassenen Elektriker beim Netzbetreiber.
@@ -35,7 +39,13 @@ Dieselbe Verbraucherzentrale-Seite: Speicher sind nicht von der vereinfachten Pr
 
 Marktstammdatenregister der Bundesnetzagentur, Weg „Steckerfertige Solaranlage (sogenanntes Balkonkraftwerk)“. Inbetriebnahme = erster Wechselstrom ins Hausnetz. Frist in der Regel ein Monat (Anlagen ab 1. Juli 2017). Gebührenfrei. Netzbetreiber wird über das MaStR informiert.
 
+Seit dem 1. April 2024 beschränkt sich der Anmeldeprozess neben den Angaben zum Betreiber auf fünf technische Angaben (Verbraucherzentrale, 6. März 2026): Leistung der Module, Leistung des Wechselrichters, Standort, Inbetriebnahmedatum, Stromzählernummer.
+
 Ohmnify-Auswertung des MaStR zum 15.08.2026: 1.472.829 in Betrieb befindliche Steckersolar-Geräte, 1,6 GWp, im Schnitt der letzten 12 Monate rund 1.054 neue Einträge pro Tag.
+
+## Zähler (§ 10a EEG)
+
+Der Zählertausch bleibt Pflicht. Der Messstellenbetreiber stattet den Zählpunkt mit einer modernen Messeinrichtung als Zweirichtungszähler oder einem intelligenten Messsystem aus, ohne gesonderte Beauftragung (§ 10a Abs. 2 EEG). Betreiben dürfen Sie das Gerät schon vorher mit dem alten Zähler, auch wenn der vorübergehend rückwärtsläuft (§ 10a Abs. 3 EEG). Für den Tausch nennt die Bundesnetzagentur „unverzüglich“: in der Regel Wochen, höchstens einige Monate, nicht Jahre.
 
 ## Miete
 
@@ -55,9 +65,12 @@ Das sind keine Angebote von steckercheck.de.
 ## Primärquellen
 
 - https://www.gesetze-im-internet.de/eeg_2014/__8.html
+- https://www.gesetze-im-internet.de/eeg_2014/__10a.html
 - https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/Solaranlagen/Balkon_table.html
 - https://www.marktstammdatenregister.de/MaStRHilfe/subpages/faq.html
+- https://www.dke.de/resource/blob/2436538/acdd2607c6e6cf6681ca12a663b6ad70/faq-zur-din-vde-v-0126-95---download-data.pdf
 - https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740
+- https://www.umweltbundesamt.de/themen/klima-energie/erneuerbare-energien/photovoltaik/steckersolargeraete-balkonkraftwerke
 - https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk/
 - https://www.gesetze-im-internet.de/bgb/__554.html
 - https://www.ohmnify.io/reports/balkonkraftwerke-deutschland
