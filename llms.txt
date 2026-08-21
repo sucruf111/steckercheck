@@ -11,16 +11,17 @@ Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, M
 - 800 VA / oft 800 W: Ausgang des Wechselrichters ins Hausnetz. Höchste wählbare Leistung zählt; eine Software-Drossel ändert die Grenze nicht (BNetzA-FAQ).
 - 2000 Wp / 2 kW: Summe der Module (Gleichstrom, Laborwert). Mehr Wp als WR-VA ist zulässig; der Wechselrichter koppelt ab.
 - Mehrere Steckersolargeräte hinter derselben Entnahmestelle (derselbe Zähler) werden addiert.
-- MaStR-Registrierung bleibt Pflicht. Extra-Meldung beim Netzbetreiber entfällt in den Grenzen bei unentgeltlicher Abnahme.
-- Schuko vs. Wieland ist eine Normfrage (DIN VDE V 0126-95, Verbraucherzentrale 6. März 2026: Schuko bis 960 W Modulleistung), keine zweite EEG-Grenze.
+- MaStR-Registrierung bleibt Pflicht. Extra-Meldung beim Netzbetreiber entfällt in den Grenzen bei unentgeltlicher Abnahme. Seit 1. April 2024 fünf technische Angaben: Module, Wechselrichter, Standort, Inbetriebnahme, Stromzählernummer (Verbraucherzentrale).
+- Zählertausch nach § 10a EEG: ohne gesonderte Beauftragung; Betrieb mit dem alten Zähler vorher erlaubt, auch wenn er rückwärtsläuft. „Unverzüglich“ heißt Wochen bis Monate, nicht Jahre (BNetzA).
+- Schuko vs. Wieland ist eine Normfrage (DIN VDE V 0126-95, Verbraucherzentrale 6. März 2026: Schuko bis 960 W Modulleistung), keine zweite EEG-Grenze. 960 W = 800 W + 20 % (DKE). Drei Schuko-Wege; nach dem Ziehen höchstens 34 V nach 1 s, WR-Abschaltung in 100 ms. Keine Mehrfachsteckdose; Leitung mindestens 5 m.
 - Produktnorm seit 1.12.2025 für Geräte ohne Speicher. Speicher: Elektriker, Anmeldung beim Netzbetreiber (Verbraucherzentrale).
 - Mieter: § 554 BGB, Privilegierung seit Oktober 2024; Unzumutbarkeit bleibt Ausnahme. Keine Rechtsberatung.
 
 ## Seiten
 
 - [Balkonkraftwerk 2026: Regeln, Anschluss und Kaufcheck](https://steckercheck.de/): Orientierungshub für Auswahl, Anschluss, Anmeldung und Kauf, mit sichtbarer FAQ.
-- [Steckersolargerät 800 VA und 2000 Wp laut Bundesnetzagentur](https://steckercheck.de/800-watt-2000-wp): Die Grenzen ausführlich, mit MaStR, Miete, Speicher, FAQ und Quellen.
-- [Schuko oder Wieland beim Balkonkraftwerk](https://steckercheck.de/schuko-oder-wieland): Die Steckerfrage als Normfrage. DIN VDE V 0126-95, Schuko bis 960 W Modulleistung.
+- [Steckersolargerät 800 VA und 2000 Wp laut Bundesnetzagentur](https://steckercheck.de/800-watt-2000-wp): Die Grenzen ausführlich, plus Zählertausch nach § 10a EEG (Betrieb vor dem Tausch, „unverzüglich“) und die fünf MaStR-Angaben, mit Miete, Speicher, FAQ und Quellen.
+- [Schuko oder Wieland beim Balkonkraftwerk](https://steckercheck.de/schuko-oder-wieland): Die Steckerfrage als Normfrage. 960 W = 800 W + 20 %, drei Schuko-Wege, 1 s / 34 V / 100 ms, keine Mehrfachsteckdose, Leitung mindestens 5 m.
 - [Balkonkraftwerk kaufen 2026: 6-Punkte-Check](https://steckercheck.de/balkonkraftwerk-kaufen): Sechs Punkte am Datenblatt, Shop-Typen und klar gekennzeichnete Partnerangebote.
 - [Impressum](https://steckercheck.de/impressum): Pflichtangaben, noindex.
 - [Datenschutz](https://steckercheck.de/datenschutz): Keine Cookies, kein Tracking, noindex.
