@@ -954,7 +954,7 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
         "DIN VDE V 0126-95"
       ],
       "datePublished": "2026-08-17",
-      "dateModified": "2026-08-20",
+      "dateModified": "2026-08-21",
       "breadcrumb": {
         "@id": "https://steckercheck.de/schuko-oder-wieland#breadcrumb"
       },
@@ -990,7 +990,7 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
       "@id": "https://steckercheck.de/schuko-oder-wieland#article",
       "headline": "Schuko oder Wieland beim Balkonkraftwerk?",
       "datePublished": "2026-08-17",
-      "dateModified": "2026-08-20",
+      "dateModified": "2026-08-21",
       "inLanguage": "de-DE",
       "mainEntityOfPage": {
         "@id": "https://steckercheck.de/schuko-oder-wieland#webpage"
@@ -1009,6 +1009,7 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
         "https://www.adac.de/news/balkonkraftwerke-din-norm/",
         "https://www.vde.com/de/presse/pressemitteilungen/weltweit-erste-produktnorm-fuer-steckersolargeraete",
         "https://www.dke.de/resource/blob/2436538/acdd2607c6e6cf6681ca12a663b6ad70/faq-zur-din-vde-v-0126-95---download-data.pdf",
+        "https://www.vde.com/de/fnn/themen/tar/tar-niederspannung/erzeugungsanlagen-steckdose",
         "https://www.gesetze-im-internet.de/eeg_2014/__8.html",
         "https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/Solaranlagen/Balkon_table.html"
       ]
@@ -1054,6 +1055,22 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Ja. Die Verbraucherzentrale warnt genau davor: in den Förderbedingungen kann eine Pflicht zum Wieland-Stecker stehen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum liegt die Schuko-Grenze genau bei 960 W Modulleistung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die DKE-FAQ zur Produktnorm (Frage 9) legen die Gesamtmodulleistung am Haushaltsstecker auf 800 W + 20 %, also 960 W, fest. Das soll eine nahezu dauerhafte Einspeisung mit 800 W vermeiden. Untersuchungen der HTW Berlin haben laut den FAQ ergeben, dass bei höheren Leistungen das Brandrisiko steigt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Darf ein Balkonkraftwerk an eine Mehrfachsteckdose oder ein Verlängerungskabel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mehrfachsteckdosen sind nach den DKE-FAQ (Frage 12) nicht zulässig: Risiko einer Leitungsüberlastung bis hin zum Brand, dazu mögliche Verzögerungen beim Spannungsabbau. Die Anschlussleitung muss mindestens 5 Meter lang sein. Verlängerungsleitungen nur, wenn der Hersteller sie zulässt."
           }
         }
       ]
@@ -1103,7 +1120,7 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
         <p class="lede">Bis 960&nbsp;W Modulleistung ist unter den Bedingungen der Produktnorm ein Schuko-Stecker vorgesehen. Liegt die Modulsumme darüber, kommt eine spezielle Energiesteckvorrichtung ins Spiel. Die 800-VA-Grenze des Wechselrichters beantwortet diese Frage nicht.</p>
         <div class="article-meta">
           <span><a href="/impressum">Redaktion steckercheck.de</a></span>
-          <span>Geprüft am 20. August 2026</span>
+          <span>Geprüft am 21. August 2026</span>
           <span>Norm- und Verbraucherquellen</span>
         </div>
       </div>
@@ -1149,8 +1166,29 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
       <p>Die Norm gilt seit dem 1.&nbsp;Dezember 2025 für Steckersolar-Geräte ohne Speicher. So die Verbraucherzentrale. Der ADAC schreibt dasselbe: im Dezember 2025 ist DIN VDE V 0126-95 erschienen. Schuko bis 960&nbsp;W Modulleistung, wenn die elektrische Sicherheit gewährleistet ist. Ein spezieller Energiesteckvorrichtungsstecker, oft Wieland genannt, bis 2000&nbsp;W Modulleistung.</p>
       <p>Die EEG-Sonderregeln erlauben Module bis 2&nbsp;kW unabhängig vom Stecker. Der Wechselrichter bleibt bei höchstens 800&nbsp;VA. Quelle: EEG §&nbsp;8 Abs.&nbsp;5a, FAQ der Bundesnetzagentur.</p>
 
+      <h2 id="warum-960">Warum die Grenze bei 960 W liegt</h2>
+
+      <p>Die 960&nbsp;W sind hergeleitet, kein runder Marketingwert. Die DKE legt in ihren FAQ zur Produktnorm (Frage&nbsp;9, Stand 17.&nbsp;Dezember 2025) die maximal zulässige Gesamtmodulleistung am Haushaltsstecker auf <strong>800&nbsp;W + 20&nbsp;%, also 960&nbsp;W,</strong> fest. Die VDE-Pressemitteilung vom 14.&nbsp;November 2025 nennt dieselbe Formel: 800&nbsp;Wp plus 20&nbsp;Prozent, also 960&nbsp;Wp.</p>
+
+      <p>Der Grund steht daneben: Es soll vermieden werden, dass nahezu dauerhaft mit 800&nbsp;W eingespeist wird. Untersuchungen der HTW Berlin haben laut denselben FAQ ergeben, dass bei höheren Leistungen das Brandrisiko steigt. In Frage&nbsp;11.3 ergänzt die DKE den Blick auf die Hausinstallation: Der eingespeiste Strom wird vom Sicherungsautomaten nicht erfasst, die Leitung muss die Summe aus Netzbezug und Einspeisung aufnehmen können. Die Grenzen 960&nbsp;W an den Modulen und 800&nbsp;VA am Wechselrichter minimieren das Risiko einer Leitungsüberlastung.</p>
+
+      <h2 id="schuko-varianten">Welche Schuko-Stecker die Norm zulässt</h2>
+
+      <p>Die DKE zählt in Frage&nbsp;10 ihrer FAQ drei Anschlussvarianten mit Haushaltsstecker auf, die nach der Produktnorm neu zulässig sind:</p>
+
+      <ol>
+        <li><strong>Modifizierter Haushaltsstecker mit Schutzumhüllungen an den Kontakten.</strong></li>
+        <li><strong>Modifizierter Haushaltsstecker mit internem Trennschalter.</strong></li>
+        <li><strong>Haushaltsstecker in Kombination mit Isolierung und sicherer Trennung im Wechselrichter.</strong></li>
+      </ol>
+
+      <p>Der bisher geforderte spezielle Energiesteckvorrichtungsstecker bleibt daneben weiterhin zulässig. Das VDE&nbsp;FNN (Stand 3.&nbsp;März 2026) beschreibt dieselben drei Wege: Schutzumhüllung, interner Trennschalter oder eine galvanische Trennung im Wechselrichter, der dafür zusätzliche Anforderungen erfüllen muss.</p>
+
+      <p>Dazu kommt der Schutz vor elektrischem Schlag (DKE-FAQ, Frage&nbsp;11.1): Wird das Gerät von der Steckdose getrennt, muss die an den Steckerkontakten berührbare Spannung <strong>innerhalb von 1&nbsp;Sekunde</strong> auf einen ungefährlichen Wert von <strong>höchstens 34&nbsp;Volt</strong> gefallen sein. Der Wechselrichter selbst muss <strong>innerhalb von 100&nbsp;Millisekunden</strong> abschalten. So liegt an den Steckerkontakten keine gefährliche Spannung an.</p>
+
       <h2>Wann der Einspeisestecker drankommt</h2>
       <p>Haben die Module zusammen mehr als 960&nbsp;W, sieht die Norm den speziellen Einspeisestecker vor. Im Handel heißt er oft Wieland. Die Verbraucherzentrale nennt ihn Einspeisestecker. Der ADAC nennt ihn Energiesteckvorrichtungsstecker über Wieland-Anschluss.</p>
+      <p>Die DKE nennt als Beispiel für diese Energiesteckvorrichtung eine Steckvorrichtung nach <strong>DIN VDE V 0628-1</strong>; mit ihr sind bis 2000&nbsp;W Gesamtmodulleistung zulässig (DKE-FAQ, Frage&nbsp;9, ebenso die VDE-Pressemitteilung vom 14.&nbsp;November 2025). Voraussetzung laut denselben FAQ: Eine Elektrofachkraft installiert die spezielle Energiesteckdose, prüft den Stromkreis und passt ihn gegebenenfalls an. Das VDE&nbsp;FNN beschreibt die Energiesteckvorrichtung als die sichere Option, wenn die Anforderungen für den Anschluss an eine Haushaltssteckdose nicht erfüllt werden können.</p>
       <p>Eine Förderung der Kommune, des Landkreises oder des Landes kann den Wieland-Stecker trotzdem verlangen. Auch unter 960&nbsp;W. Das steht bei der Verbraucherzentrale direkt hinter der Schuko-Erlaubnis.</p>
 
       <figure class="frame">
@@ -1169,6 +1207,12 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
           <p>Über 960&nbsp;W Modulleistung ein spezieller Einspeisestecker, häufig Wieland. Eine Förderung kann ihn auch darunter verlangen.</p>
         </div>
       </div>
+
+      <h2 id="mehrfachsteckdose">Keine Mehrfachsteckdose, fünf Meter Leitung</h2>
+
+      <p>Egal welcher Stecker: Der Anschluss über Mehrfachsteckdosen ist nach der Produktnorm nicht zulässig. Die DKE begründet das in Frage&nbsp;12 ihrer FAQ mit dem Risiko einer Leitungsüberlastung, die zu einem Brand führen kann, und mit möglichen Verzögerungen beim Spannungsabbau. Das VDE&nbsp;FNN warnt gleichlautend: niemals mehrere Anlagen über eine Mehrfach-Verteilersteckdose an eine Haushaltssteckdose anschließen.</p>
+
+      <p>Die Anschlussleitung eines Steckersolargeräts muss nach der Produktnorm <strong>mindestens 5&nbsp;Meter</strong> lang sein. Bei den typischen Anwendungen an der Haushaltssteckdose ist damit keine Verlängerung nötig. Falls doch, dürfen nur vom Hersteller des Geräts zugelassene Verlängerungsleitungen verwendet werden; sonst besteht das Risiko, dass Schutzmaßnahmen des Geräts ausgehebelt werden (DKE-FAQ, Frage&nbsp;12).</p>
 
       <h2>Geräte mit Speicher</h2>
       <p>Die Produktnorm gilt laut Verbraucherzentrale für Geräte ohne Speicher. Einen Speicher muss ein zugelassener Elektriker beim Netzbetreiber anmelden und anschließen. Stand 6.&nbsp;März 2026.</p>
@@ -1198,14 +1242,23 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
           <summary><h3>Kann eine Förderung Wieland verlangen, obwohl Schuko reicht?</h3></summary>
           <p>Ja. Die Verbraucherzentrale warnt genau davor: in den Förderbedingungen kann eine Pflicht zum Wieland-Stecker stehen.</p>
         </details>
+        <details class="faq-item">
+          <summary><h3>Warum liegt die Schuko-Grenze genau bei 960&nbsp;W Modulleistung?</h3></summary>
+          <p>Die DKE-FAQ zur Produktnorm (Frage 9) legen die Gesamtmodulleistung am Haushaltsstecker auf 800 W + 20 %, also 960 W, fest. Das soll eine nahezu dauerhafte Einspeisung mit 800 W vermeiden. Untersuchungen der HTW Berlin haben laut den FAQ ergeben, dass bei höheren Leistungen das Brandrisiko steigt.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Darf ein Balkonkraftwerk an eine Mehrfachsteckdose oder ein Verlängerungskabel?</h3></summary>
+          <p>Mehrfachsteckdosen sind nach den DKE-FAQ (Frage 12) nicht zulässig: Risiko einer Leitungsüberlastung bis hin zum Brand, dazu mögliche Verzögerungen beim Spannungsabbau. Die Anschlussleitung muss mindestens 5 Meter lang sein. Verlängerungsleitungen nur, wenn der Hersteller sie zulässt.</p>
+        </details>
       </section>
 
       <h2>Quellen</h2>
       <ol class="sources">
         <li>Verbraucherzentrale, Gesetze und Normen für Steckersolar, Stand 6.&nbsp;März 2026 — Schuko bis 960&nbsp;W Modulleistung; Einspeisestecker darüber; DIN VDE V 0126-95 seit 1.&nbsp;Dezember 2025 für Geräte ohne Speicher; Förderung kann Wieland verlangen; Speicher nur über Elektriker. Abgerufen am 17.&nbsp;August 2026. <a href="https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740">https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740</a></li>
         <li>ADAC, DIN VDE V 0126-95: Neue Regelung für Balkonkraftwerke und Schuko-Stecker — Norm erschienen Dezember 2025; Schuko bis 960&nbsp;W; Energiesteckvorrichtung / Wieland bis 2000&nbsp;W; 800&nbsp;W Wechselrichter. Abgerufen am 17.&nbsp;August 2026. <a href="https://www.adac.de/news/balkonkraftwerke-din-norm/">https://www.adac.de/news/balkonkraftwerke-din-norm/</a></li>
-        <li>VDE / DKE, Pressemitteilung 14.&nbsp;November 2025 — DIN VDE V 0126-95 VDE V 0126-95:2025-12, Veröffentlichungsdatum Dezember 2025. <a href="https://www.vde.com/de/presse/pressemitteilungen/weltweit-erste-produktnorm-fuer-steckersolargeraete">https://www.vde.com/de/presse/pressemitteilungen/weltweit-erste-produktnorm-fuer-steckersolargeraete</a></li>
-        <li>DKE, FAQ zur DIN VDE V 0126-95 (PDF) — Haushaltsstecker bis 960&nbsp;W Gesamtmodulleistung; Energiesteckvorrichtung bis 2000&nbsp;W. <a href="https://www.dke.de/resource/blob/2436538/acdd2607c6e6cf6681ca12a663b6ad70/faq-zur-din-vde-v-0126-95---download-data.pdf">https://www.dke.de/resource/blob/2436538/acdd2607c6e6cf6681ca12a663b6ad70/faq-zur-din-vde-v-0126-95---download-data.pdf</a></li>
+        <li>VDE / DKE, Pressemitteilung 14.&nbsp;November 2025 — DIN VDE V 0126-95 VDE V 0126-95:2025-12, Veröffentlichungsdatum Dezember 2025; 800&nbsp;Wp + 20&nbsp;% (960&nbsp;Wp) am Haushaltsstecker; 2000&nbsp;Wp mit Energiesteckvorrichtungsstecker z.&nbsp;B. nach DIN VDE V 0628-1; drei Schutzmaßnahmen für den Schuko-Anschluss. <a href="https://www.vde.com/de/presse/pressemitteilungen/weltweit-erste-produktnorm-fuer-steckersolargeraete">https://www.vde.com/de/presse/pressemitteilungen/weltweit-erste-produktnorm-fuer-steckersolargeraete</a></li>
+        <li>DKE, FAQ zur DIN VDE V 0126-95 (PDF, Veröffentlichung 17.&nbsp;Dezember 2025) — Frage&nbsp;9: 800&nbsp;W + 20&nbsp;% = 960&nbsp;W am Haushaltsstecker, 2000&nbsp;W mit Energiesteckvorrichtungsstecker z.&nbsp;B. nach DIN VDE V 0628-1, Installation der Energiesteckdose durch eine Elektrofachkraft; Frage&nbsp;10: drei zulässige Schuko-Varianten; Frage&nbsp;11.1: höchstens 34&nbsp;Volt nach 1&nbsp;Sekunde, Wechselrichter-Abschaltung in 100&nbsp;Millisekunden; Frage&nbsp;12: keine Mehrfachsteckdosen, Anschlussleitung mindestens 5&nbsp;Meter, Verlängerung nur mit Freigabe des Herstellers. <a href="https://www.dke.de/resource/blob/2436538/acdd2607c6e6cf6681ca12a663b6ad70/faq-zur-din-vde-v-0126-95---download-data.pdf">https://www.dke.de/resource/blob/2436538/acdd2607c6e6cf6681ca12a663b6ad70/faq-zur-din-vde-v-0126-95---download-data.pdf</a></li>
+        <li>VDE FNN, Steckerfertige PV-Anlagen: Anschluss &amp; Anmeldung (Stand 3.&nbsp;März 2026) — Schuko-Anschluss unter den Bedingungen der Produktnorm mit 800&nbsp;VA und bis 960&nbsp;Wp; Schutzumhüllung, interner Trennschalter oder galvanische Trennung im Wechselrichter; niemals mehrere Anlagen über eine Mehrfach-Verteilersteckdose; Energiesteckvorrichtung als sichere Option bis 2000&nbsp;Wp. Abgerufen am 21.&nbsp;August 2026. <a href="https://www.vde.com/de/fnn/themen/tar/tar-niederspannung/erzeugungsanlagen-steckdose">https://www.vde.com/de/fnn/themen/tar/tar-niederspannung/erzeugungsanlagen-steckdose</a></li>
         <li>EEG §&nbsp;8 Abs.&nbsp;5a — 800&nbsp;VA, 2000&nbsp;Wp, keine Steckergrenze im Gesetzestext. <a href="https://www.gesetze-im-internet.de/eeg_2014/__8.html">https://www.gesetze-im-internet.de/eeg_2014/__8.html</a></li>
         <li>Bundesnetzagentur, FAQ Balkon-Solaranlagen. <a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/Solaranlagen/Balkon_table.html">https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/Solaranlagen/Balkon_table.html</a></li>
       </ol>
@@ -1233,7 +1286,7 @@ body.error .page-hero { min-height: calc(100vh - var(--header-h)); display: flex
         <a href="/datenschutz">Datenschutz</a>
         <a href="/impressum#affiliate">Partnerlinks</a>
       </nav>
-      <p class="footer-meta">Inhalte geprüft am 20. August 2026. Quellen: EEG, Bundesnetzagentur, Marktstammdatenregister, Verbraucherzentrale und ADAC. Kommerzielle Links sind direkt gekennzeichnet. Keine Rechts- oder Elektroberatung.</p>
+      <p class="footer-meta">Inhalte geprüft am 21. August 2026. Quellen: EEG, Bundesnetzagentur, Marktstammdatenregister, Verbraucherzentrale und ADAC. Kommerzielle Links sind direkt gekennzeichnet. Keine Rechts- oder Elektroberatung.</p>
     </div>
   </footer>
 </body>
