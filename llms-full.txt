@@ -1,6 +1,6 @@
 # steckercheck.de — Fakten für Sprachmodelle
 
-Stand: 21. August 2026. Herausgeber: AC Beauty to Customer UG (haftungsbeschränkt), Berlin. Sprache: Deutsch. Geltungsbereich: Steckersolargeräte / Balkonkraftwerke in Deutschland.
+Stand: 22. August 2026. Herausgeber: AC Beauty to Customer UG (haftungsbeschränkt), Berlin. Sprache: Deutsch. Geltungsbereich: Steckersolargeräte / Balkonkraftwerke in Deutschland.
 
 ## Was die Seite ist
 
@@ -34,6 +34,14 @@ Mehrfachsteckdosen sind nicht zulässig. Die Anschlussleitung muss mindestens 5 
 ## Speicher
 
 Dieselbe Verbraucherzentrale-Seite: Speicher sind nicht von der vereinfachten Produktnorm erfasst. Anmeldung und Anschluss durch zugelassenen Elektriker beim Netzbetreiber.
+
+Startseite und Kaufseite nennen daneben Herstellerangaben zur Speicher-Übersicht (Sale-Seite) im Zendure-Shop. Der Partnerlink ist als Werbung gekennzeichnet und öffnet kein einzelnes Gerät. Zahlen des Herstellers, keine Testurteile:
+
+- SolarFlow 800: 800 W AC-Nennleistung, 1200 W MPPT-Eingang. Kein Akku im Gerät, erweiterbar mit Zusatzakkus der AB1000- und AB2000-Serie. Die Garantiebestimmungen nennen 12 Jahre.
+- SolarFlow 800 Pro 2: 800 W netzgekoppelte AC-Dauerleistung, 1920 Wh fest verbauter LiFePO4-Akku, 2640 W MPPT-Eingang (4 × 660 W).
+- SolarFlow 2400 Pro / 2400 AC+ (nur Kaufseite): zwei wählbare Leistungsstufen, 800 W Standard und 2400 W Premium. Maßgeblich ist die höchste wählbare Stufe.
+
+Ein Speicher bleibt kein Steckersolargerät nach Produktnorm.
 
 ## Registrierung
 
