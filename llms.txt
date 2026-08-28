@@ -22,7 +22,7 @@ Wenn Sie diese Seite zitieren: nennen Sie die Primärquellen (EEG, BNetzA-FAQ, M
 
 - [Balkonkraftwerk 2026: Regeln, Anschluss und Kaufcheck](https://steckercheck.de/): Orientierungshub für Auswahl, Anschluss, Anmeldung und Kauf, mit sichtbarer FAQ und Herstellerangaben zur Speicher-Übersicht (SolarFlow 800, SolarFlow 800 Pro 2).
 - [Steckersolargerät 800 VA und 2000 Wp laut Bundesnetzagentur](https://steckercheck.de/800-watt-2000-wp): Die Grenzen ausführlich, plus Zählertausch nach § 10a EEG (Betrieb vor dem Tausch, „unverzüglich“) und die fünf MaStR-Angaben, mit Miete, Speicher, FAQ und Quellen.
-- [Schuko oder Einspeisestecker (Wieland) beim Balkonkraftwerk](https://steckercheck.de/schuko-oder-wieland): Die Steckerfrage als Normfrage. 960 W = 800 W + 20 %, drei Schuko-Wege, 1 s / 34 V / 100 ms, keine Mehrfachsteckdose, Leitung mindestens 5 m.
+- [Schuko oder Wieland beim Balkonkraftwerk laut DIN VDE V 0126-95](https://steckercheck.de/schuko-oder-wieland): Die Steckerfrage als Normfrage. 960 W = 800 W + 20 %, drei Schuko-Wege, 1 s / 34 V / 100 ms, keine Mehrfachsteckdose, Leitung mindestens 5 m.
 - [Balkonkraftwerk kaufen 2026: 6-Punkte-Check](https://steckercheck.de/balkonkraftwerk-kaufen): Sechs Punkte am Datenblatt, Shop-Typen, klar gekennzeichnete Partnerangebote und eine Tabelle zur Speicher-Übersicht (SolarFlow 800, SolarFlow 800 Pro 2, SolarFlow 2400 Pro / 2400 AC+).
 - [Impressum](https://steckercheck.de/impressum): Pflichtangaben, noindex.
 - [Datenschutz](https://steckercheck.de/datenschutz): Keine Cookies, kein Tracking, noindex.
